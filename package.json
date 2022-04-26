@@ -12,7 +12,7 @@
 	"author": "KAM <1479376017@qq.com>",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/kampiu/sukee.git"
 	},
 	"license": "MIT",
 	"engines": {
@@ -22,6 +22,7 @@
 		"lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
 		"prebuild": "rimraf dist",
 		"build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src",
+		"docs": "typedoc --out docs --target es6 --theme minimal --mode file src/suke",
 		"start": "rollup -c rollup.config.ts -w",
 		"test": "jest --coverage",
 		"test:watch": "jest --coverage --watch",
@@ -34,6 +35,7 @@
 		"precommit": "lint-staged",
 		"travis-deploy-once": "travis-deploy-once"
 	},
+	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md",
 	"lint-staged": {
 		"{src,test}/**/*.ts": [
 			"prettier --write",
