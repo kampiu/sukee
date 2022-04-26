@@ -33,7 +33,14 @@
 		"semantic-release": "semantic-release",
 		"semantic-release-prepare": "ts-node tools/semantic-release-prepare",
 		"precommit": "lint-staged",
-		"travis-deploy-once": "travis-deploy-once"
+		"travis-deploy-once": "travis-deploy-once",
+		"major": "npm version major -m 'build: update major'",
+		"minor": "npm version minor -m 'build: update minor'",
+		"patch": "npm version patch -m 'build: update patch'",
+		"pub": "npm run build && npm publish --access=public",
+		"pub:major": "npm run major && npm publish --access=public",
+		"pub:minor": "npm run minor && npm publish --access=public",
+		"pub:patch": "npm run patch && npm publish --access=public"
 	},
 	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md",
 	"lint-staged": {
