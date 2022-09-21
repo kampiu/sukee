@@ -25,6 +25,10 @@
 		".": "./src/core.ts",
 		"./package.json": "./package.json"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kampiu/sukee.git"
+	},
 	"scripts": {
 		"test": "node ./test/core.test.ts"
 	},
