@@ -1,27 +1,42 @@
 {
 	"compilerOptions": {
 		"moduleResolution": "node",
-		"target": "es5",
-		"module": "es2015",
+		"target": "esnext",
+		"module": "esnext",
 		"lib": [
 			"es2015",
 			"es2016",
-			"es2017",
-			"dom"
+			"es2017"
 		],
 		"strict": true,
+		"allowJs": false,
 		"sourceMap": true,
 		"declaration": true,
-		"allowSyntheticDefaultImports": true,
+		"declarationMap": true,
 		"experimentalDecorators": true,
+		"esModuleInterop": true,
 		"emitDecoratorMetadata": true,
+		"allowSyntheticDefaultImports": true,
 		"declarationDir": "dist/types",
 		"outDir": "dist/lib",
 		"typeRoots": [
 			"node_modules/@types"
-		]
+		],
+		"skipLibCheck": false
 	},
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		}
+	],
 	"include": [
-		"src"
+		"src",
+		".eslintrc.js",
+		".prettierrc.js",
+		"babel.config.js"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
 	]
 }

@@ -4,7 +4,7 @@
 	"description": "",
 	"keywords": [],
 	"main": "dist/sukee.umd.js",
-	"module": "dist/sukee.es5.js",
+	"module": "dist/sukee.esm.js",
 	"typings": "dist/types/sukee.d.ts",
 	"files": [
 		"dist"
@@ -33,6 +33,7 @@
 		"semantic-release": "semantic-release",
 		"semantic-release-prepare": "ts-node tools/semantic-release-prepare",
 		"precommit": "lint-staged",
+		"lint:script": "prettier --write ./src/**/*.ts && eslint --fix",
 		"travis-deploy-once": "travis-deploy-once",
 		"major": "npm version major -m 'build: update major'",
 		"minor": "npm version minor -m 'build: update minor'",
@@ -45,7 +46,8 @@
 	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md",
 	"lint-staged": {
 		"{src,test}/**/*.ts": [
-			"prettier --write",
+			"prettier --write ./src/**/*.ts",
+			"eslint --fix",
 			"git add"
 		]
 	},
@@ -81,49 +83,67 @@
 			"src/*.{js,ts}"
 		]
 	},
-	"prettier": {
-		"semi": false,
-		"singleQuote": true
-	},
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"
 		]
 	},
 	"devDependencies": {
+		"@babel/eslint-parser": "^7.18.2",
 		"@commitlint/cli": "^7.1.2",
 		"@commitlint/config-conventional": "^7.1.2",
 		"@types/jest": "^23.3.2",
+		"@types/lodash": "^4.14.182",
 		"@types/node": "^10.11.0",
+		"@types/rollup-plugin-json": "^3.0.3",
+		"@types/rollup-plugin-node-resolve": "^4.1.0",
+		"@types/rollup-plugin-sourcemaps": "^0.5.0",
+		"@typescript-eslint/eslint-plugin": "^5.27.1",
+		"@typescript-eslint/parser": "5.33.0",
+		"babel": "^6.23.0",
+		"babel-eslint": "^10.1.0",
 		"colors": "^1.3.2",
 		"commitizen": "^3.0.0",
 		"coveralls": "^3.0.2",
 		"cross-env": "^5.2.0",
 		"cz-conventional-changelog": "^2.1.0",
+		"eslint": "^8.17.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-airbnb-typescript": "^17.0.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-import-resolver-typescript": "^2.7.1",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-react": "^7.30.0",
+		"eslint-plugin-react-hooks": "^4.5.0",
 		"husky": "^1.0.1",
 		"jest": "^23.6.0",
 		"jest-config": "^23.6.0",
+		"lerna": "^5.5.2",
 		"lint-staged": "^8.0.0",
-		"lodash.camelcase": "^4.3.0",
-		"prettier": "^1.14.3",
+		"lodash": "^4.17.21",
+		"prettier": "^2.6.2",
 		"prompt": "^1.0.0",
 		"replace-in-file": "^3.4.2",
 		"rimraf": "^2.6.2",
-		"rollup": "^0.67.0",
+		"rollup": "^2.79.0",
 		"rollup-plugin-commonjs": "^9.1.8",
 		"rollup-plugin-json": "^3.1.0",
 		"rollup-plugin-node-resolve": "^3.4.0",
 		"rollup-plugin-sourcemaps": "^0.4.2",
+		"rollup-plugin-typescript": "^1.0.1",
 		"rollup-plugin-typescript2": "^0.18.0",
 		"semantic-release": "^15.9.16",
 		"shelljs": "^0.8.3",
 		"travis-deploy-once": "^5.0.9",
 		"ts-jest": "^23.10.2",
 		"ts-node": "^7.0.1",
-		"tslint": "^5.11.0",
-		"tslint-config-prettier": "^1.15.0",
-		"tslint-config-standard": "^8.0.1",
-		"typedoc": "^0.18.0",
-		"typescript": "^3.9.10"
-	}
+		"typedoc": "^0.23.14",
+		"typescript": "^4.6.3"
+	},
+	"workspaces": [
+		"packages/*"
+	]
 }
