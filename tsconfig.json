@@ -1,8 +1,9 @@
 {
 	"compilerOptions": {
+		"baseUrl": ".",
 		"moduleResolution": "node",
-		"target": "esnext",
-		"module": "esnext",
+		"target": "ESNext",
+		"module": "ESNext",
 		"lib": [
 			"es2015",
 			"es2016",
@@ -10,19 +11,18 @@
 		],
 		"strict": true,
 		"allowJs": false,
-		"sourceMap": true,
-		"declaration": true,
-		"declarationMap": true,
+		"sourceMap": false,
 		"experimentalDecorators": true,
 		"esModuleInterop": true,
 		"emitDecoratorMetadata": true,
 		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
 		"declarationDir": "dist/types",
 		"outDir": "dist/lib",
 		"typeRoots": [
 			"node_modules/@types"
-		],
-		"skipLibCheck": false
+		]
 	},
 	"references": [
 		{
@@ -31,8 +31,7 @@
 	],
 	"include": [
 		"src",
-		"packages",
-		"test",
+		"packages/*/src",
 		".eslintrc.js",
 		".prettierrc.js",
 		"babel.config.js"
