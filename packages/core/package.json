@@ -11,6 +11,9 @@
 	"engines": {
 		"node": ">=6.9.0"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"directories": {
 		"lib": "./dist/",
 		"test": "./test"
@@ -28,5 +31,5 @@
 	"bugs": {
 		"url": "https://github.com/kampiu/sukee/issues"
 	},
-	"gitHead": "1e871b75cef799c89d72d0294f93fc9114f3d31f"
+	"gitHead": "ff3e0c8445488813248aecc679c7f72bb70172d1"
 }
