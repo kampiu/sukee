@@ -31,6 +31,8 @@
 	],
 	"include": [
 		"src",
+		"packages",
+		"test",
 		".eslintrc.js",
 		".prettierrc.js",
 		"babel.config.js"
