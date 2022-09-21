@@ -2,38 +2,35 @@
 	"name": "@suko/core",
 	"version": "0.0.16",
 	"description": "核心功能包",
-	"author": "KAM <1479376017@qq.com>",
-	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md/tree/main/packages/core#readme",
-	"license": "MIT",
+	"keywords": [],
 	"main": "./dist/core.umd.js",
 	"module": "./dist/core.esm.js",
 	"typings": "./dist/types/core.d.ts",
+	"files": [
+		"./dist"
+	],
+	"author": "KAM <1479376017@qq.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kampiu/sukee.git"
+	},
+	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md/tree/main/packages/core#readme",
+	"license": "MIT",
 	"engines": {
 		"node": ">=6.9.0"
 	},
 	"publishConfig": {
 		"access": "public"
 	},
+	"scripts": {
+		"test": "node ./test/core.test.ts"
+	},
 	"directories": {
 		"lib": "./dist/",
 		"test": "./test"
 	},
-	"files": [
-		"./dist"
-	],
-	"exports": {
-		".": "./src/core.ts",
-		"./package.json": "./package.json"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/kampiu/sukee.git"
-	},
-	"scripts": {
-		"test": "node ./test/core.test.ts"
-	},
 	"bugs": {
 		"url": "https://github.com/kampiu/sukee/issues"
 	},
-	"gitHead": "a27b6f15014bdeafa4444d7432c88861344f29a4"
+	"gitHead": "42eac412062961cc291b0a19e9bc9103ba08e02f"
 }
