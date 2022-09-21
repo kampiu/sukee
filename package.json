@@ -3,12 +3,6 @@
 	"version": "0.0.1",
 	"description": "",
 	"keywords": [],
-	"main": "dist/sukee.umd.js",
-	"module": "dist/sukee.esm.js",
-	"typings": "dist/types/sukee.d.ts",
-	"files": [
-		"dist"
-	],
 	"author": "KAM <1479376017@qq.com>",
 	"repository": {
 		"type": "git",
