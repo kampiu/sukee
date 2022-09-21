@@ -1,6 +1,6 @@
 {
 	"name": "@suko/core",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "核心功能包",
 	"keywords": [],
 	"main": "./dist/core.umd.js",
@@ -28,5 +28,5 @@
 	"bugs": {
 		"url": "https://github.com/kampiu/sukee/issues"
 	},
-	"gitHead": "d8d0b4bcfe6623a85bd70ed4a1bf2fecf070c94a"
+	"gitHead": "5d4f21f47cb06419d45b502e535d26a22c965147"
 }
