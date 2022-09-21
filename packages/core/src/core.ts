@@ -18,4 +18,8 @@ export default class Core {
 		this.tasks[time] = job
 		return time
 	}
+
+	getTask(jobId: JobId): Job{
+		return this.tasks[jobId]
+	}
 }
