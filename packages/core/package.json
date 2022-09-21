@@ -12,7 +12,7 @@
 		"node": ">=6.9.0"
 	},
 	"publishConfig": {
-		"access": "public"
+		"registry": "https://registry.npmjs.org/"
 	},
 	"directories": {
 		"lib": "./dist/",
@@ -35,5 +35,5 @@
 	"bugs": {
 		"url": "https://github.com/kampiu/sukee/issues"
 	},
-	"gitHead": "46bea0ddd22e577e9a3327808c98c1c8c0889d7b"
+	"gitHead": "b6b309737aee7b89d1b6b5c160f5c27e41edd1c1"
 }
