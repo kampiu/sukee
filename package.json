@@ -19,7 +19,7 @@
 		"node": ">=6.0.0"
 	},
 	"publishConfig": {
-		"registry": "https://registry.npmjs.org/"
+		"access": "public"
 	},
 	"scripts": {
 		"lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
