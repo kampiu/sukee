@@ -3,11 +3,11 @@
 	"version": "0.0.10",
 	"description": "核心功能包",
 	"keywords": [],
-	"main": "./dist/core.umd.js",
-	"module": "./dist/core.esm.js",
-	"typings": "./dist/types/core.d.ts",
+	"main": "dist/core.umd.js",
+	"module": "dist/core.esm.js",
+	"typings": "dist/types/core.d.ts",
 	"files": [
-		"./dist"
+		"dist"
 	],
 	"author": "KAM <1479376017@qq.com>",
 	"repository": {
