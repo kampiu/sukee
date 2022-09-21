@@ -1,6 +1,7 @@
 {
 	"name": "suko",
-	"version": "0.0.2",
+	"private": true,
+	"version": "0.0.3",
 	"description": "",
 	"keywords": [],
 	"main": "dist/sukee.umd.js",
