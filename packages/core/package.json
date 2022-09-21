@@ -22,13 +22,6 @@
 		".": "./src/core.ts",
 		"./package.json": "./package.json"
 	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/kampiu/sukee.git"
-	},
 	"scripts": {
 		"test": "node ./test/core.test.ts"
 	},
