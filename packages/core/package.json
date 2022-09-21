@@ -14,7 +14,6 @@
 		"type": "git",
 		"url": "https://github.com/kampiu/sukee.git"
 	},
-	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md/tree/main/packages/core#readme",
 	"license": "MIT",
 	"engines": {
 		"node": ">=6.9.0"
@@ -25,12 +24,8 @@
 	"scripts": {
 		"test": "node ./test/core.test.ts"
 	},
-	"directories": {
-		"lib": "./dist/",
-		"test": "./test"
-	},
+	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md/tree/main/packages/core#readme",
 	"bugs": {
 		"url": "https://github.com/kampiu/sukee/issues"
-	},
-	"gitHead": "42eac412062961cc291b0a19e9bc9103ba08e02f"
+	}
 }
