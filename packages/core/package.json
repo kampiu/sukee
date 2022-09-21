@@ -1,5 +1,5 @@
 {
-	"name": "@suko/core",
+	"name": "@sukos/core",
 	"version": "0.0.12",
 	"description": "核心功能包",
 	"keywords": [],
@@ -27,6 +27,5 @@
 	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md/tree/main/packages/core#readme",
 	"bugs": {
 		"url": "https://github.com/kampiu/sukee/issues"
-	},
-	"gitHead": "0d1faf16b0291d9acfbd10cb1e7c822a6e9046c6"
+	}
 }
