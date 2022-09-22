@@ -13,48 +13,48 @@ const pkg = require("./package.json")
 const libraryName = "sukee"
 
 export default [
-	{
-		input: `src/${ libraryName }.ts`,
-		output: [
-			{
-				file: pkg.main,
-				name: _.camelCase(libraryName),
-				format: "umd",
-				sourcemap: false,
-				exports: "auto"
-			},
-			{
-				file: pkg.module,
-				name: _.camelCase(libraryName),
-				format: "es",
-				sourcemap: false,
-				exports: "auto"
-			}
-		],
-		external: [],
-		watch: {
-			include: ["src/**"]
-		},
-		plugins: [
-			babel({
-				exclude: "node_modules/**"
-			}),
-			json(),
-			typescript(),
-			commonjs(),
-			resolve(),
-			sourceMaps(),
-			process.env.ENV === "development"
-				? serve({
-					// 开发环境，本地起一个静态服务
-					open: true, // 自动在浏览器打开
-					openPage: "/public/index.html", // 入口页面路径
-					port: "8080", // 端口号
-					contentBase: "" // 静态文件路径， ""代表按照当前目录结构
-				})
-				: null
-		]
-	},
+	// {
+	// 	input: `src/${ libraryName }.ts`,
+	// 	output: [
+	// 		{
+	// 			file: pkg.main,
+	// 			name: _.camelCase(libraryName),
+	// 			format: "umd",
+	// 			sourcemap: false,
+	// 			exports: "auto"
+	// 		},
+	// 		{
+	// 			file: pkg.module,
+	// 			name: _.camelCase(libraryName),
+	// 			format: "es",
+	// 			sourcemap: false,
+	// 			exports: "auto"
+	// 		}
+	// 	],
+	// 	external: [],
+	// 	watch: {
+	// 		include: ["src/**"]
+	// 	},
+	// 	plugins: [
+	// 		babel({
+	// 			exclude: "node_modules/**"
+	// 		}),
+	// 		json(),
+	// 		typescript(),
+	// 		commonjs(),
+	// 		resolve(),
+	// 		sourceMaps(),
+	// 		// process.env.ENV === "development"
+	// 		// 	? serve({
+	// 		// 		// 开发环境，本地起一个静态服务
+	// 		// 		open: true, // 自动在浏览器打开
+	// 		// 		openPage: "/public/index.html", // 入口页面路径
+	// 		// 		port: "8080", // 端口号
+	// 		// 		contentBase: "" // 静态文件路径， ""代表按照当前目录结构
+	// 		// 	})
+	// 		// 	: null
+	// 	]
+	// },
 	{
 		input: `packages/core/src/core.ts`,
 		output: [
