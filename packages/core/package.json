@@ -1,6 +1,6 @@
 {
 	"name": "@sukos/core",
-	"version": "0.0.15",
+	"version": "0.0.16",
 	"description": "核心功能包",
 	"keywords": [],
 	"main": "dist/core.umd.js",
