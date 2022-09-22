@@ -8,6 +8,5 @@
 		"publish": {
 			"message": "chore(release): publish"
 		}
-	},
-	"packages": ["packages/*"]
+	}
 }
