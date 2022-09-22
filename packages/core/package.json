@@ -1,6 +1,6 @@
 {
 	"name": "@sukos/core",
-	"version": "0.0.14",
+	"version": "0.0.15",
 	"description": "核心功能包",
 	"keywords": [],
 	"main": "dist/core.umd.js",
@@ -28,7 +28,5 @@
 	"bugs": {
 		"url": "https://github.com/kampiu/sukee/issues"
 	},
-	"gitHead": "b78d0a6d90d98601a1e30f1e08030ed4a133db6d",
-	"dependencies": {
-	}
+	"gitHead": "b78d0a6d90d98601a1e30f1e08030ed4a133db6d"
 }
