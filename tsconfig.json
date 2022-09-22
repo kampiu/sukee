@@ -1,6 +1,5 @@
 {
 	"compilerOptions": {
-		"baseUrl": ".",
 		"moduleResolution": "node",
 		"target": "ESNext",
 		"module": "ESNext",
@@ -18,7 +17,7 @@
 		"allowSyntheticDefaultImports": true,
 		"declaration": true,
 		"emitDeclarationOnly": true,
-		"declarationDir": "dist/types",
+		"declarationDir": "./dist/types",
 		"outDir": "dist/lib",
 		"typeRoots": [
 			"node_modules/@types"
@@ -30,10 +29,7 @@
 		}
 	],
 	"include": [
-		"src",
-		"test",
 		"packages/*/src",
-		"packages/*/test",
 		".eslintrc.js",
 		".prettierrc.js",
 		"babel.config.js"
