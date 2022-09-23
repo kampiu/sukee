@@ -31,6 +31,7 @@
 	},
 	"gitHead": "fab7022356d098251d309745145eea5f5de98dfa",
 	"dependencies": {
-		"moment": "^2.29.4"
+		"moment": "^2.29.4",
+		"react": "^18.2.0"
 	}
 }

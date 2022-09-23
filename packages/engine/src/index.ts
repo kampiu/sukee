@@ -24,6 +24,6 @@ export default class Index {
 	}
 
 	static getName(): string {
-		return "demo"
+		return "engine"
 	}
 }

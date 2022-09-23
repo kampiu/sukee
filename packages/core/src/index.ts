@@ -27,4 +27,8 @@ export default class Index {
 	getTask(jobId: JobId): Job {
 		return this.tasks[jobId]
 	}
+
+	static getName(): string {
+		return "core"
+	}
 }
