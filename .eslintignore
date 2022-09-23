@@ -10,4 +10,4 @@ Dockerfile
 **/*.sh
 
 /public/*
-/rollup.config.js
+/rollup.config.ts

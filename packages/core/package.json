@@ -3,9 +3,9 @@
 	"version": "0.0.18",
 	"description": "核心功能包",
 	"keywords": [],
-	"main": "dist/core.umd.js",
-	"module": "dist/core.esm.js",
-	"typings": "dist/types/core.d.ts",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"typings": "dist/types/index.d.ts",
 	"files": [
 		"dist"
 	],

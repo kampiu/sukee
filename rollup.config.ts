@@ -1,5 +1,7 @@
+// @ts-ignore
 import resolve from "rollup-plugin-node-resolve"
 import commonjs from "rollup-plugin-commonjs"
+// @ts-ignore
 import sourceMaps from "rollup-plugin-sourcemaps"
 import * as _ from "lodash"
 import json from "rollup-plugin-json"
@@ -15,7 +17,7 @@ const packages = [ "core", "engine" ]
 
 const CommonPlugins = [ json(), typescript({ tsconfig: path.resolve(__dirname, "./", "tsconfig.json") }), commonjs(), resolve(), sourceMaps() ]
 
-const createTask = (name) => {
+const createTask = (name: string) => {
 	return {
 		input: `packages/${ name }/src/index.ts`,
 		output: [

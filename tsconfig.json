@@ -8,7 +8,8 @@
 		"packages/*/src",
 		".eslintrc.js",
 		".prettierrc.js",
-		"babel.config.js"
+		"babel.config.js",
+		"rollup.config.ts"
 	],
 	"exclude": [
 		"node_modules",

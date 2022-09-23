@@ -18,10 +18,10 @@
 	},
 	"scripts": {
 		"prebuild": "rimraf dist",
-		"build": "tsc --module commonjs && rollup -c rollup.config.js",
+		"build": "tsc --module commonjs && rollup -c rollup.config.ts",
 		"serve": "cross-env ENV=development rollup -c -w",
 		"docs": "typedoc --out docs --target es6 --theme minimal --mode file src/suke",
-		"start": "rollup -c rollup.config.js -w",
+		"start": "rollup -c rollup.config.ts -w",
 		"test": "jest --coverage",
 		"test:watch": "jest --coverage --watch",
 		"test:prod": "npm run lint && npm run test -- --no-cache",
