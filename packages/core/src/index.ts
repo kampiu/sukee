@@ -1,3 +1,5 @@
+import * as _ from "lodash"
+
 type JobId = number
 
 interface Job {
@@ -5,11 +7,14 @@ interface Job {
 	action: () => void
 }
 
-export default class Core {
+export default class Index {
 	public tasks: Record<JobId, Job>
+
+	public name: number
 
 	constructor() {
 		this.tasks = []
+		this.name = new Date().getTime()
 	}
 
 	createTask(job: Job): JobId {
@@ -19,7 +24,7 @@ export default class Core {
 		return time
 	}
 
-	getTask(jobId: JobId): Job{
+	getTask(jobId: JobId): Job {
 		return this.tasks[jobId]
 	}
 }

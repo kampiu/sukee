@@ -1,4 +1,4 @@
-import Engine from "../src/engine"
+import Index from "../src"
 
 /**
  * Dummy test
@@ -9,6 +9,6 @@ describe("Dummy test", () => {
 	})
 
 	it("DummyClass is instantiable", () => {
-		expect(new Engine()).toBeInstanceOf(Engine)
+		expect(new Index()).toBeInstanceOf(Index)
 	})
 })

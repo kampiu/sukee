@@ -4,9 +4,6 @@
 	"version": "0.0.3",
 	"description": "",
 	"keywords": [],
-	"main": "dist/sukee.umd.js",
-	"module": "dist/sukee.esm.js",
-	"typings": "dist/types/sukee.d.ts",
 	"author": "KAM <1479376017@qq.com>",
 	"repository": {
 		"type": "git",
@@ -20,12 +17,11 @@
 		"access": "public"
 	},
 	"scripts": {
-		"lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
 		"prebuild": "rimraf dist",
-		"build": "tsc --module commonjs && rollup -c rollup.config.ts",
+		"build": "tsc --module commonjs && rollup -c rollup.config.js",
 		"serve": "cross-env ENV=development rollup -c -w",
 		"docs": "typedoc --out docs --target es6 --theme minimal --mode file src/suke",
-		"start": "rollup -c rollup.config.ts -w",
+		"start": "rollup -c rollup.config.js -w",
 		"test": "jest --coverage",
 		"test:watch": "jest --coverage --watch",
 		"test:prod": "npm run lint && npm run test -- --no-cache",
@@ -138,7 +134,7 @@
 		"rollup-plugin-serve": "^2.0.1",
 		"rollup-plugin-sourcemaps": "^0.4.2",
 		"rollup-plugin-typescript": "^1.0.1",
-		"rollup-plugin-typescript2": "^0.18.0",
+		"rollup-plugin-typescript2": "^0.18.1",
 		"semantic-release": "^15.9.16",
 		"shelljs": "^0.8.3",
 		"travis-deploy-once": "^5.0.9",

@@ -1,7 +1,7 @@
 {
 	"name": "@sukos/engine",
-	"version": "0.0.17",
-	"description": "核心功能包",
+	"version": "0.0.16",
+	"description": "业务引擎",
 	"keywords": [],
 	"main": "dist/engine.umd.js",
 	"module": "dist/engine.esm.js",
@@ -22,11 +22,15 @@
 		"access": "public"
 	},
 	"scripts": {
-		"test": "node ./test/engine.test.ts"
+		"test": "node test/engine.test.ts",
+		"build": "tsc"
 	},
 	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md/tree/main/packages/engine#readme",
 	"bugs": {
 		"url": "https://github.com/kampiu/sukee/issues"
 	},
-	"gitHead": "fab7022356d098251d309745145eea5f5de98dfa"
+	"gitHead": "fab7022356d098251d309745145eea5f5de98dfa",
+	"dependencies": {
+		"moment": "^2.29.4"
+	}
 }

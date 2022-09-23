@@ -1,11 +1,11 @@
-# `@sukos/engine`
+# `core`
 
 > TODO: description
 
 ## Usage
 
 ```
-const engine = require('@sukos/engine');
+const core = require('core');
 
 // TODO: DEMONSTRATE API
 ```

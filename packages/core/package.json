@@ -22,11 +22,17 @@
 		"access": "public"
 	},
 	"scripts": {
-		"test": "node ./test/core.test.ts"
+		"test": "node ./test/core.test.ts",
+		"build": "tsc"
 	},
 	"homepage": "https://github.com/kampiu/sukee/blob/master/README.md/tree/main/packages/core#readme",
 	"bugs": {
 		"url": "https://github.com/kampiu/sukee/issues"
 	},
-	"gitHead": "fab7022356d098251d309745145eea5f5de98dfa"
+	"gitHead": "fab7022356d098251d309745145eea5f5de98dfa",
+	"dependencies": {
+		"@types/lodash": "^4.14.182",
+		"lodash": "^4.17.21",
+		"moment": "^2.29.4"
+	}
 }

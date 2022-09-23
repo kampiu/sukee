@@ -5,7 +5,7 @@ interface Job {
 	action: () => void
 }
 
-export default class Engine {
+export default class Index {
 	public tasks: Record<JobId, Job>
 
 	constructor() {
@@ -19,7 +19,7 @@ export default class Engine {
 		return time
 	}
 
-	getTask(jobId: JobId): Job {
+	getTask(jobId: JobId): Job{
 		return this.tasks[jobId]
 	}
 }

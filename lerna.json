@@ -2,6 +2,7 @@
 	"useNx": true,
 	"useWorkspaces": true,
 	"npmClient": "npm",
+	"packages": ["packages/*"],
 	"version": "0.0.17",
 	"command": {
 		"publish": {

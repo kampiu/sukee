@@ -1,4 +1,4 @@
-import Core from "../src/core"
+import Index from "../src"
 
 /**
  * Dummy test
@@ -9,6 +9,6 @@ describe("Dummy test", () => {
 	})
 
 	it("DummyClass is instantiable", () => {
-		expect(new Core()).toBeInstanceOf(Core)
+		expect(new Index()).toBeInstanceOf(Index)
 	})
 })
