@@ -1,6 +1,6 @@
 {
 	"name": "@sukos/engine",
-	"version": "0.0.16",
+	"version": "0.0.18",
 	"description": "业务引擎",
 	"keywords": [],
 	"main": "dist/engine.umd.js",
