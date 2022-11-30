@@ -5,10 +5,10 @@ module.exports = {
 	semi: false,
 	singleQuote: false,
 	jsxSingleQuote: false,
-	trailingComma: "none",
+	trailingComma: "all",
 	bracketSpacing: true,
 	bracketSameLine: false,
 	arrowParens: "always",
 	endOfLine: "lf",
-	singleAttributePerLine: false
+	singleAttributePerLine: false,
 }

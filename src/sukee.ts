@@ -1,3 +1,6 @@
-import { rand, randStr, prefixInteger } from "./modules/helper"
+import Input from "./components/input"
+import Button from "./components/button"
 
-export { rand, randStr, prefixInteger }
+export type { ButtonProps } from "./components/button"
+
+export { Input, Button }

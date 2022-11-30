@@ -12,7 +12,7 @@ export const randStr = (len = 64, type: TRandStrType = "default"): string => {
 		default: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
 		number: "0123456789",
 		lowerCase: "abcdefghijklmnopqrstuvwxyz",
-		upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
 	}
 	const str = strMap[type]
 	let result = ""
