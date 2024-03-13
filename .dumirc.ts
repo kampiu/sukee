@@ -2,6 +2,7 @@ import { defineConfig } from "dumi"
 import path from "path"
 
 export default defineConfig({
+	base: "/sukee/", // "https://kampiu.github.io/sukee/
 	publicPath: "/sukee/",
 	outputPath: "docs",
 	resolve: {
