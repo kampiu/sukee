@@ -3,12 +3,11 @@ import React from "react"
 
 const App: React.FC = () => (
 	<>
-		<Button type="primary">Primary Button</Button>
-		<Button>Default Button</Button>
-		<Button type="dashed">Dashed Button</Button>
-		<br/>
-		<Button type="text">Text Button</Button>
-		<Button type="link">Link Button</Button>
+		<Button theme="primary">Link Button</Button>
+		<Button theme="secondary">Link Button</Button>
+		<Button theme="tertiary">Link Button</Button>
+		<Button theme="warning">Link Button</Button>
+		<Button theme="danger">Link Button</Button>
 	</>
 )
 

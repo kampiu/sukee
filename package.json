@@ -82,9 +82,6 @@
 			".(ts|tsx)": "ts-jest"
 		}
 	},
-	"dependencies": {
-		"clsx": "^2.1.0"
-	},
 	"devDependencies": {
 		"@babel/cli": "^7.14.8",
 		"@babel/core": "^7.15.0",
@@ -121,6 +118,7 @@
 		"babel-eslint": "^10.1.0",
 		"babel-loader": "^8.2.2",
 		"babel-runtime": "^6.26.0",
+		"clsx": "^2.1.0",
 		"commitizen": "^3.0.0",
 		"coveralls": "^3.0.2",
 		"cross-env": "^5.2.0",

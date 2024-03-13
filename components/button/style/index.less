@@ -1,7 +1,107 @@
 @import "../../style/variable.less";
 
-@button-prefix-cls: ~"@{sukee-prefix-cls}-button";
+@button-prefix-cls: ~"@{sukee-prefix}-button";
 
 .@{button-prefix-cls} {
-	background-color: pink;
+	box-shadow: none;
+	font-size: 14px;
+	line-height: 20px;
+	height: 32px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	user-select: none;
+	border: 0 solid transparent;
+	border-radius: 3px;
+	padding: 6px 12px;
+	outline: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #FFFFFF;
+	margin: 4px;
+
+	&-theme {
+		&-primary {
+			background-color: @sukee-color-primary;
+
+			&:hover {
+				background-color: @sukee-color-primary-hover;
+			}
+
+			&:active {
+				background-color: @sukee-color-primary-active;
+			}
+		}
+
+		&-secondary {
+			background-color: @sukee-color-secondary;
+
+			&:hover {
+				background-color: @sukee-color-secondary-hover;
+			}
+
+			&:active {
+				background-color: @sukee-color-secondary-active;
+			}
+
+		}
+
+		&-tertiary {
+			background-color: @sukee-color-tertiary;
+
+			&:hover {
+				background-color: @sukee-color-tertiary-hover;
+			}
+
+			&:active {
+				background-color: @sukee-color-tertiary-active;
+			}
+
+		}
+
+		&-warning {
+			background-color: @sukee-color-warning;
+
+			&:hover {
+				background-color: @sukee-color-warning-hover;
+			}
+
+			&:active {
+				background-color: @sukee-color-warning-active;
+			}
+
+		}
+
+		&-danger {
+			background-color: @sukee-color-danger;
+
+			&:hover {
+				background-color: @sukee-color-danger-hover;
+			}
+
+			&:active {
+				background-color: @sukee-color-danger-active;
+			}
+
+		}
+
+		&-success {
+			background-color: @sukee-color-success;
+
+			&:hover {
+				background-color: @sukee-color-success-hover;
+			}
+
+			&:active {
+				background-color: @sukee-color-success-active;
+			}
+
+		}
+	}
+
+	&-disabled {
+		background-color: red;
+		cursor: not-allowed;
+	}
 }
