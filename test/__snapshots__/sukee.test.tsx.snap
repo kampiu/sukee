@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dummy test 按钮测试 1`] = `
+<button
+  class="sk-button sk-button-primary sk-button-default"
+  type="button"
+>
+  Follow
+</button>
+`;

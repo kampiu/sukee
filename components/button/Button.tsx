@@ -12,7 +12,7 @@ export interface ButtonProps {
 	className?: string;
 	block?: boolean;
 	/** 内容 */
-	children?: React.ReactNode;
+	children?: React.ReactNode | string;
 	
 	[key: `data-${ string }`]: string;
 	
@@ -20,7 +20,7 @@ export interface ButtonProps {
 	htmlType?: "button" | "submit" | "reset"
 }
 
-const Button = (props: ButtonProps) => {
+function Button(props: ButtonProps) {
 	const {
 		children,
 		disabled,

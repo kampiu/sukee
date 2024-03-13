@@ -46,6 +46,8 @@ module.exports = {
 	rules: {
 		"react/no-unused-class-component-methods": 0,
 		"import/no-extraneous-dependencies": 0,
+		"react/require-default-props": 0,
+		"react/no-unused-prop-types": 0,
 		"import/extensions": 0,
 	},
 	globals: {
