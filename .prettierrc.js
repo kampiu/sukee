@@ -1,10 +1,14 @@
 module.exports = {
-  proseWrap: "never",
-  printWidth: 120,
+  printWidth: 100,
   tabWidth: 4,
-  trailingComma: "es5",
+  useTabs: true,
+  semi: false,
+  singleQuote: false,
+  jsxSingleQuote: false,
+  trailingComma: "none",
   bracketSpacing: true,
-  singleQuote: true,
-  useTabs: false,
-  semi: true
+  bracketSameLine: false,
+  arrowParens: "always",
+  endOfLine: "lf",
+  singleAttributePerLine: false
 };

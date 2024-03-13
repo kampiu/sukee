@@ -1,24 +1,61 @@
 {
 	"compilerOptions": {
 		"baseUrl": "./",
-		"paths": {
-			"@": ["./src"]
-		},
-		"strictNullChecks": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"esModuleInterop": true,
-		"experimentalDecorators": true,
 		"jsx": "react",
-		"jsxFactory": "React.createElement",
-		"jsxFragmentFactory": "React.Fragment",
+		"moduleResolution": "node",
+		"target": "es5",
+		"module": "esnext",
+		"lib": [
+			"dom",
+			"es2015",
+			"es2016",
+			"es2017",
+			"dom.iterable"
+		],
+		"strictNullChecks": true,
+		"strict": true,
+		"allowJs": false,
+		"sourceMap": true,
+		"declaration": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"emitDecoratorMetadata": true,
+		"declarationDir": "dist/types",
+		"outDir": "dist/lib",
+		"typeRoots": [
+			"node_modules/@types",
+			"types"
+		],
+		"paths": {
+			"@@/*": [".dumi/tmp/*"],
+			"sukee": ["components/index.tsx"],
+			"sukee/es/*": ["components/*"],
+			"sukee/lib/*": ["components/*"]
+		},
 		"noUnusedParameters": true,
 		"noUnusedLocals": true,
 		"noImplicitAny": true,
-		"target": "es6",
-		"lib": ["dom", "es2017"],
 		"skipLibCheck": true,
-		"stripInternal": true
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"stripInternal": true,
+		"types": [
+			"node",
+			"jest"
+		]
 	},
-	"exclude": ["node_modules", "lib", "es"]
+	"include": [
+		"src",
+		"site",
+		".prettierrc.js",
+		"babel.config.js",
+		"types/*.ts",
+		"test",
+		".dumi"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
 }
