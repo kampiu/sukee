@@ -12,3 +12,4 @@ Dockerfile
 /public/*
 /rollup.config.ts
 /types/*.ts
+docs

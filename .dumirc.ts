@@ -2,7 +2,7 @@ import { defineConfig } from "dumi"
 import path from "path"
 
 export default defineConfig({
-	outputPath: "docs_dist",
+	outputPath: "docs",
 	resolve: {
 		atomDirs: [{type: "component", dir: "components"}],
 		codeBlockMode: "passive",
