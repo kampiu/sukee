@@ -3,7 +3,7 @@ import clsx from "clsx"
 import { useConfig } from "../config-provider"
 
 export interface ButtonProps {
-	type?: "primary" | "dashed" | "link" | "text" | "default" | "ghost" | "light";
+	type?: "default" | "dashed" | "link" | "text" | "light";
 	theme?: "primary" | "secondary" | "tertiary" | "warning" | "danger";
 	icon?: React.ReactNode;
 	disabled?: boolean;
@@ -27,15 +27,22 @@ const Button = (props: ButtonProps) => {
 		className,
 		prefixCls: customizePrefixCls,
 		htmlType = "button",
-		theme = "primary"
+		theme = "primary",
+		type = "default"
 	} = props
 	
 	const {getPrefixCls} = useConfig()
 	const prefixCls = getPrefixCls("button", customizePrefixCls)
 	
-	const classes = clsx(prefixCls, className, `${ prefixCls }-theme-${ theme }`, {
-		[`${ prefixCls }-disabled`]: disabled
-	})
+	const classes = clsx(
+		prefixCls,
+		className,
+		`${ prefixCls }-${ theme }`,
+		`${ prefixCls }-${ type }`,
+		{
+			[`${ prefixCls }-disabled`]: disabled
+		}
+	)
 	
 	return (
 		<button type={ htmlType } className={ classes } disabled={ disabled }>{ children }</button>

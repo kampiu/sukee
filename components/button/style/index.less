@@ -2,9 +2,90 @@
 
 @button-prefix-cls: ~"@{sukee-prefix}-button";
 
+.button-mixin(@color, @hover-color, @active-color, @light-color, @light-hover-color, @light-active-color) {
+	background-color: @color;
+	border: 1px solid @color;
+
+	&:hover {
+		background-color: @hover-color;
+		border: 1px solid @hover-color;
+	}
+
+	&:active {
+		background-color: @active-color;
+		border: 1px solid @active-color;
+	}
+
+	&-dashed {
+		border-style: dashed;
+		background-color: #FFFFFF;
+		color: @color;
+	}
+
+	&.@{button-prefix-cls}-dashed {
+		border-style: dashed;
+		background-color: #FFFFFF;
+		color: @color;
+
+		&:hover {
+			color: @hover-color;
+			border-color: @hover-color;
+		}
+
+		&:active {
+			color: @active-color;
+			border-color: @active-color;
+		}
+	}
+
+	&.@{button-prefix-cls}-link {
+		border-style: none;
+		background-color: #FFFFFF;
+		color: @color;
+
+		&:hover {
+			color: @hover-color;
+		}
+
+		&:active {
+			color: @active-color;
+		}
+	}
+
+	&.@{button-prefix-cls}-text {
+		border-style: none;
+		background-color: #FFFFFF;
+		color: @color;
+
+		&:hover {
+			background-color: @light-color;
+		}
+
+		&:active {
+			background-color: @light-hover-color;
+		}
+	}
+
+
+	&.@{button-prefix-cls}-light {
+		border-style: none;
+		background-color: @sukee-color-fill-0;
+		color: @color;
+		font-weight: 600;
+
+		&:hover {
+			background-color: @sukee-color-fill-1;
+		}
+
+		&:active {
+			background-color: @sukee-color-fill-2;
+		}
+	}
+}
+
 .@{button-prefix-cls} {
 	box-shadow: none;
-	font-size: 14px;
+	font-size: @sukee-font-size-regular;
 	line-height: 20px;
 	height: 32px;
 	display: inline-flex;
@@ -12,8 +93,7 @@
 	justify-content: center;
 	cursor: pointer;
 	user-select: none;
-	border: 0 solid transparent;
-	border-radius: 3px;
+	border-radius: @sukee-border-radius-small;
 	padding: 6px 12px;
 	outline: none;
 	vertical-align: middle;
@@ -21,83 +101,28 @@
 	color: #FFFFFF;
 	margin: 4px;
 
-	&-theme {
-		&-primary {
-			background-color: @sukee-color-primary;
+	&-primary {
+		.button-mixin(@sukee-color-primary, @sukee-color-primary-hover, @sukee-color-primary-active, @sukee-color-light-primary, @sukee-color-light-primary-hover, @sukee-color-light-primary-active);
+	}
 
-			&:hover {
-				background-color: @sukee-color-primary-hover;
-			}
+	&-secondary {
+		.button-mixin(@sukee-color-secondary, @sukee-color-secondary-hover, @sukee-color-secondary-active, @sukee-color-light-secondary, @sukee-color-light-secondary-hover, @sukee-color-light-secondary-active);
+	}
 
-			&:active {
-				background-color: @sukee-color-primary-active;
-			}
-		}
+	&-tertiary {
+		.button-mixin(@sukee-color-tertiary, @sukee-color-tertiary-hover, @sukee-color-tertiary-active, @sukee-color-light-tertiary, @sukee-color-light-tertiary-hover, @sukee-color-light-tertiary-active);
+	}
 
-		&-secondary {
-			background-color: @sukee-color-secondary;
+	&-warning {
+		.button-mixin(@sukee-color-warning, @sukee-color-warning-hover, @sukee-color-warning-active, @sukee-color-light-warning, @sukee-color-light-warning-hover, @sukee-color-light-warning-active);
+	}
 
-			&:hover {
-				background-color: @sukee-color-secondary-hover;
-			}
+	&-danger {
+		.button-mixin(@sukee-color-danger, @sukee-color-danger-hover, @sukee-color-danger-active, @sukee-color-light-danger, @sukee-color-light-danger-hover, @sukee-color-light-danger-active);
+	}
 
-			&:active {
-				background-color: @sukee-color-secondary-active;
-			}
-
-		}
-
-		&-tertiary {
-			background-color: @sukee-color-tertiary;
-
-			&:hover {
-				background-color: @sukee-color-tertiary-hover;
-			}
-
-			&:active {
-				background-color: @sukee-color-tertiary-active;
-			}
-
-		}
-
-		&-warning {
-			background-color: @sukee-color-warning;
-
-			&:hover {
-				background-color: @sukee-color-warning-hover;
-			}
-
-			&:active {
-				background-color: @sukee-color-warning-active;
-			}
-
-		}
-
-		&-danger {
-			background-color: @sukee-color-danger;
-
-			&:hover {
-				background-color: @sukee-color-danger-hover;
-			}
-
-			&:active {
-				background-color: @sukee-color-danger-active;
-			}
-
-		}
-
-		&-success {
-			background-color: @sukee-color-success;
-
-			&:hover {
-				background-color: @sukee-color-success-hover;
-			}
-
-			&:active {
-				background-color: @sukee-color-success-active;
-			}
-
-		}
+	&-success {
+		.button-mixin(@sukee-color-success, @sukee-color-success-hover, @sukee-color-success-active, @sukee-color-light-success, @sukee-color-light-success-hover, @sukee-color-light-success-active);
 	}
 
 	&-disabled {
