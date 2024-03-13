@@ -2,6 +2,7 @@ import { defineConfig } from "dumi"
 import path from "path"
 
 export default defineConfig({
+	base: "/sukee/",
 	outputPath: "docs",
 	resolve: {
 		atomDirs: [{type: "component", dir: "components"}],
