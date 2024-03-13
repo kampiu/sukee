@@ -13,30 +13,15 @@
 	"author": "kampiu <1479376017@qq.com>",
 	"scripts": {
 		"prebuild": "rimraf dist",
-		"build": "tsc --module commonjs && rollup -c rollup.config.ts",
 		"precommit": "lint-staged",
 		"commit": "git-cz",
-		"deploy-docs": "ts-node tools/gh-pages-publish",
-		"docs": "typedoc --out docs --target es6 --theme minimal --mode file src/suke",
 		"lint:script": "prettier --write ./src/**/*.ts && eslint --fix",
-		"major": "npm version major -m 'build: update major'",
-		"minor": "npm version minor -m 'build: update minor'",
-		"patch": "npm version patch -m 'build: update patch'",
-		"pub": "npm run build && npm publish --access=public",
-		"pub:major": "npm run major && npm publish --access=public",
-		"pub:minor": "npm run minor && npm publish --access=public",
-		"pub:patch": "npm run patch && npm publish --access=public",
 		"report-coverage": "cat ./coverage/lcov.info | coveralls",
-		"semantic-release": "semantic-release",
-		"semantic-release-prepare": "ts-node tools/semantic-release-prepare",
-		"serve": "cross-env ENV=development rollup -c -w",
 		"start": "dumi dev",
-		"subuild": "vite build --mode production",
-		"sukee": "vite --mode development",
+		"docs:build": "dumi build",
 		"test": "jest --coverage",
 		"test:prod": "npm run lint && npm run test -- --no-cache",
-		"test:watch": "jest --coverage --watch",
-		"travis-deploy-once": "travis-deploy-once"
+		"test:watch": "jest --coverage --watch"
 	},
 	"commitlint": {
 		"extends": [
