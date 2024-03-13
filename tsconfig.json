@@ -27,10 +27,18 @@
 			"types"
 		],
 		"paths": {
-			"@@/*": [".dumi/tmp/*"],
-			"sukee": ["components/index.tsx"],
-			"sukee/es/*": ["components/*"],
-			"sukee/lib/*": ["components/*"]
+			"@@/*": [
+				".dumi/tmp/*"
+			],
+			"sukee": [
+				"components/index.tsx"
+			],
+			"sukee/es/*": [
+				"components/*"
+			],
+			"sukee/lib/*": [
+				"components/*"
+			]
 		},
 		"noUnusedParameters": true,
 		"noUnusedLocals": true,

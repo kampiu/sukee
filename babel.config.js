@@ -1,4 +1,3 @@
 module.exports = {
-	presets: [ "@babel/eslint", [ "@babel/preset-env", { loose: true } ] ],
-	plugins: [ "lodash" ]
+	presets: [ "@babel/preset-react", "@babel/preset-typescript", [ "@babel/preset-env", { loose: true } ] ]
 }
