@@ -2,7 +2,14 @@ import React from "react"
 import clsx from "clsx"
 import { useConfig } from "../config-provider"
 
-export interface ButtonProps {
+type MergedHTMLAttributes = Omit<
+	React.HTMLAttributes<HTMLElement> &
+	React.ButtonHTMLAttributes<HTMLElement> &
+	React.AnchorHTMLAttributes<HTMLElement>,
+	'type'
+>;
+
+export interface ButtonProps extends MergedHTMLAttributes {
 	type?: "default" | "dashed" | "link" | "text" | "light";
 	theme?: "primary" | "secondary" | "tertiary" | "warning" | "danger";
 	icon?: React.ReactNode;
@@ -34,6 +41,14 @@ function Button(props: ButtonProps) {
 	const {getPrefixCls} = useConfig()
 	const prefixCls = getPrefixCls("button", customizePrefixCls)
 	
+	const onClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => {
+		if (disabled) {
+			event.preventDefault();
+			return
+		}
+		props?.onClick?.(event)
+	}
+	
 	const classes = clsx(
 		prefixCls,
 		className,
@@ -45,7 +60,7 @@ function Button(props: ButtonProps) {
 	)
 	
 	return (
-		<button type={ htmlType } className={ classes } disabled={ disabled }>{ children }</button>
+		<button type={ htmlType } onClick={onClick} className={ classes } disabled={ disabled }>{ children }</button>
 	)
 }
 

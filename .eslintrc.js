@@ -47,7 +47,9 @@ module.exports = {
 		"react/no-unused-class-component-methods": 0,
 		"import/no-extraneous-dependencies": 0,
 		"react/require-default-props": 0,
+		"react/jsx-filename-extension": 0,
 		"react/no-unused-prop-types": 0,
+		"react/button-has-type": 0,
 		"import/extensions": 0,
 	},
 	globals: {
