@@ -1,11 +1,9 @@
 import React from "react"
-import "./index.less"
+// import Container from "./Container"
 
 function Index() {
 	return (
-		<div className="container">
-			Index
-		</div>
+		<div/>
 	)
 }
 

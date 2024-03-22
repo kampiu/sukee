@@ -31,26 +31,24 @@ export default defineConfig({
 		// ],
 	],
 	locales: [
-		{id: "zh-CN", name: "中文", suffix: ""},
-		{id: "en-US", name: "English", suffix: "_us"},
+		{id: "zh", name: "中文"},
+		{id: "en", name: "English"},
 	],
 	themeConfig: {
-		name: "Sukee",
+		name: "sukee",
 		nav: {
-			"zh-CN": [
-				// { title: '指南', link: '/guide/help' },
+			"zh": [
 				{title: "研发", link: "/introduce/development"},
 				{title: "组件", link: "/components/button"},
 			],
-			"en-US": [
-				// { title: 'guide', link: '/guide/help_us' },
-				{title: "Development", link: "/introduce/development_us"},
-				{title: "Components", link: "/components/button_us"},
+			"en": [
+				{title: "Development", link: "/en/introduce/development"},
+				{title: "Components", link: "/en/components/button"},
 			],
 		},
-		footer: "Copyright © 2013-2023 KK All Rights Reserved.",
+		footer: "Copyright © 2013-2023 Sukee All Rights Reserved.",
 		actions: {
-			"zh-CN": [
+			"zh": [
 				{
 					type: "primary",
 					text: "开始使用",
@@ -61,7 +59,7 @@ export default defineConfig({
 					link: "/config/base",
 				},
 			],
-			"en-US": [
+			"en": [
 				{
 					type: "primary",
 					text: "Start",
@@ -74,7 +72,7 @@ export default defineConfig({
 			],
 		},
 		features: {
-			"zh-CN": [
+			"zh": [
 				{
 					title: "内置全文搜索",
 					details:
@@ -90,7 +88,7 @@ export default defineConfig({
 					details: "接入简单，安装即使用，全面融入 Ant Design 风格。",
 				},
 			],
-			"en-US": [
+			"en": [
 				{
 					title: "Built-in Full-Text search",
 					details:

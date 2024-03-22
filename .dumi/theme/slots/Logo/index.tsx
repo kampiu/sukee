@@ -1,15 +1,17 @@
-import { Link, useLocale, useSiteData } from 'dumi';
+import { Link, useLocale, useSiteData, useAppData } from 'dumi';
 import React, { type FC } from 'react';
 import './index.less';
 
 const Logo: FC = () => {
   const { themeConfig } = useSiteData();
   const locale = useLocale();
-
+  
+  const a = useAppData()
+  console.log(">>>", locale, a)
   return (
     <Link
       className="dumi-default-logo"
-      to={'base' in locale ? locale.base : '/'}
+      to={'base' in locale ? locale.base : '/index'}
     >
       {themeConfig.logo !== false && (
         <img
