@@ -1,8 +1,8 @@
 ---
 category: Components
 group:
-  title: 通用
-  order: 1
+    title: Common
+    order: 1
 title: Space
 subtitle: Space
 cover: https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg

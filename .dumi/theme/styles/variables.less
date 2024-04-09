@@ -1,3 +1,5 @@
+@import "sukee/es/style/themes/index.less";
+
 @prefix: dumi-default;
 
 @s-content-width: 1392px;
@@ -11,9 +13,9 @@
 @c-warning: #d59200;
 @c-success: #208a41;
 @c-error: #ce1f31;
-@c-text: #30363f;
+@c-text: @sukee-color-text-0;
 @c-text-secondary: #4f5866;
-@c-text-note: #B2B6BD;
+@c-text-note: @sukee-color-text-3;
 @c-border: #d0d5d8;
 @c-border-light: #e4e9ec;
 @c-site-bg: #FFFFFF;
@@ -27,9 +29,9 @@
 @c-warning-dark: darken(@c-warning, @dark-solid-amount);
 @c-success-dark: darken(@c-success, @dark-solid-amount);
 @c-error-dark: darken(@c-error, @dark-solid-amount);
-@c-text-dark: lighten(@c-text-note, @dark-light-amount);
+@c-text-dark: @sukee-color-text-0;
 @c-text-secondary-dark: lighten(@c-text-secondary, @dark-light-amount);
-@c-text-note-dark: lighten(@c-text, @dark-light-amount);
+@c-text-note-dark: @sukee-color-text-3;
 @c-border-dark: darken(@c-border, @dark-border-amount);
 @c-border-less-dark: darken(@c-border-light, @dark-border-amount);
 @c-site-bg-dark: darken(@c-site-bg, 95%);
