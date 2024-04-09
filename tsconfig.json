@@ -10,6 +10,7 @@
 			"es2015",
 			"es2016",
 			"es2017",
+			"esnext",
 			"dom.iterable"
 		],
 		"strictNullChecks": true,
@@ -54,7 +55,7 @@
 		]
 	},
 	"include": [
-		"src",
+		"components",
 		"site",
 		".prettierrc.js",
 		"babel.config.js",
