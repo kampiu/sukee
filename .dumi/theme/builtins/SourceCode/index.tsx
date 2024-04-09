@@ -1,4 +1,4 @@
-import classNames from "classnames"
+import classNames from "clsx"
 import { useSiteData } from "dumi"
 import Highlight, { defaultProps, type Language } from "prism-react-renderer"
 import "prism-themes/themes/prism-one-light.css"

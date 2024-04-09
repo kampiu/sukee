@@ -7,3 +7,13 @@
 ```shell
 npm install sukee --save
 ```
+
+## 引入
+
+```jsx
+import { Button } from "sukee"
+
+function App() {
+	return <Button>按钮</Button>
+}
+```

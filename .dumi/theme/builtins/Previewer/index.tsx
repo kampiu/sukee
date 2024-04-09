@@ -1,4 +1,4 @@
-import classnames from "classnames"
+import classnames from "clsx"
 import { IPreviewerProps, useLocation } from "dumi"
 import React, { useRef, type FC } from "react"
 import PreviewerActions from "../../slots/PreviewerActions"
