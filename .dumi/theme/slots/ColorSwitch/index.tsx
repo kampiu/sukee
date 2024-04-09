@@ -46,9 +46,9 @@ const ColorSwitch: FC = () => {
     >
       {Icon && <Icon />}
       <select
-        onChange={(ev) => setPrefersColor(ev.target.value as any)}
+        onChange={(event) => setPrefersColor(event.target.value as any)}
         value={prefersColor}
-        onClick={(e) => e.stopPropagation()}
+        onClick={(event) => event.stopPropagation()}
       >
         {['light', 'dark', 'auto'].map((c) => (
           <option value={c} key={c}>

@@ -19,7 +19,6 @@ import Sidebar from "../../slots/Sidebar"
 import Toc from "../../slots/Toc"
 import React, { useEffect, useState, type FC } from "react"
 import "./index.less"
-import "sukee/es/style/index.less"
 
 const DocLayout: FC = () => {
 	const intl = useIntl()
@@ -38,6 +37,7 @@ const DocLayout: FC = () => {
 		
 		if (id) {
 			setTimeout(() => {
+				// @ts-ignore
 				const elm = document.getElementById(decodeURIComponent(id))
 				
 				if (elm) {

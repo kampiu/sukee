@@ -7,7 +7,8 @@ const defaultGetPrefixCls = (suffixCls?: string, customizePrefixCls?: string): s
 	return suffixCls ? `sk-${suffixCls}` : "sk"
 }
 export const ConfigContext = React.createContext<ConfigConsumerProps>({
-	getPrefixCls: defaultGetPrefixCls
+	getPrefixCls: defaultGetPrefixCls,
+	theme: "light"
 })
 
 export const ConfigConsumer = ConfigContext.Consumer

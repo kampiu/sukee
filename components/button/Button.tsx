@@ -6,7 +6,7 @@ type MergedHTMLAttributes = Omit<
 	React.HTMLAttributes<HTMLElement> &
 	React.ButtonHTMLAttributes<HTMLElement> &
 	React.AnchorHTMLAttributes<HTMLElement>,
-	'type'
+	"type"
 >;
 
 export interface ButtonProps extends MergedHTMLAttributes {
@@ -38,12 +38,12 @@ function Button(props: ButtonProps) {
 		type = "default"
 	} = props
 	
-	const {getPrefixCls} = useConfig()
+	const {getPrefixCls, theme: globalTheme} = useConfig()
 	const prefixCls = getPrefixCls("button", customizePrefixCls)
 	
 	const onClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => {
 		if (disabled) {
-			event.preventDefault();
+			event.preventDefault()
 			return
 		}
 		props?.onClick?.(event)
@@ -59,8 +59,9 @@ function Button(props: ButtonProps) {
 		}
 	)
 	
+	console.log("-->===", globalTheme)
 	return (
-		<button type={ htmlType } onClick={onClick} className={ classes } disabled={ disabled }>{ children }</button>
+		<button theme-mode={globalTheme} type={ htmlType } onClick={ onClick } className={ classes } disabled={ disabled }>{ children }</button>
 	)
 }
 

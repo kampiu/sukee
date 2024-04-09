@@ -6,7 +6,7 @@ import React from "react"
 const ButtonTypes: Array<ButtonProps["type"]> = ["default", "dashed", "light", "text", "link"]
 
 const App = () => ButtonTypes.map(type => (
-	<div>
+	<div key={type}>
 		<Button type={ type } theme="primary">{ type } Button</Button>
 		<Button type={ type } theme="secondary">{ type } Button</Button>
 		<Button type={ type } theme="tertiary">{ type } Button</Button>

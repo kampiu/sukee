@@ -11,3 +11,4 @@ compiled
 docs
 .editorconfig
 .dumi/tmp-production
+.dumi/tmp

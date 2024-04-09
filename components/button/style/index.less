@@ -1,87 +1,7 @@
-@import "../../style/variable.less";
+@import "../../style/variable";
+@import "./mixin";
 
 @button-prefix-cls: ~"@{sukee-prefix}-button";
-
-.button-mixin(@color, @hover-color, @active-color, @light-color, @light-hover-color, @light-active-color) {
-	background-color: @color;
-	border: 1px solid @color;
-
-	&:hover {
-		background-color: @hover-color;
-		border: 1px solid @hover-color;
-	}
-
-	&:active {
-		background-color: @active-color;
-		border: 1px solid @active-color;
-	}
-
-	&-dashed {
-		border-style: dashed;
-		background-color: #FFFFFF;
-		color: @color;
-	}
-
-	&.@{button-prefix-cls}-dashed {
-		border-style: dashed;
-		background-color: #FFFFFF;
-		color: @color;
-
-		&:hover {
-			color: @hover-color;
-			border-color: @hover-color;
-		}
-
-		&:active {
-			color: @active-color;
-			border-color: @active-color;
-		}
-	}
-
-	&.@{button-prefix-cls}-link {
-		border-style: none;
-		background-color: #FFFFFF;
-		color: @color;
-
-		&:hover {
-			color: @hover-color;
-		}
-
-		&:active {
-			color: @active-color;
-		}
-	}
-
-	&.@{button-prefix-cls}-text {
-		border-style: none;
-		background-color: #FFFFFF;
-		color: @color;
-
-		&:hover {
-			background-color: @light-color;
-		}
-
-		&:active {
-			background-color: @light-hover-color;
-		}
-	}
-
-
-	&.@{button-prefix-cls}-light {
-		border-style: none;
-		background-color: @sukee-color-fill-0;
-		color: @color;
-		font-weight: 600;
-
-		&:hover {
-			background-color: @sukee-color-fill-1;
-		}
-
-		&:active {
-			background-color: @sukee-color-fill-2;
-		}
-	}
-}
 
 .@{button-prefix-cls} {
 	box-shadow: none;
@@ -100,6 +20,7 @@
 	white-space: nowrap;
 	color: #FFFFFF;
 	margin: 4px;
+	background-color: @sukee-color-border;
 
 	&-primary {
 		.button-mixin(@sukee-color-primary, @sukee-color-primary-hover, @sukee-color-primary-active, @sukee-color-light-primary, @sukee-color-light-primary-hover, @sukee-color-light-primary-active);
@@ -126,7 +47,6 @@
 	}
 
 	&-disabled {
-		background-color: red;
 		cursor: not-allowed;
 	}
 }

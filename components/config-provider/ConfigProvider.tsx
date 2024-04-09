@@ -1,9 +1,10 @@
-import React, { PropsWithChildren, useCallback, useMemo } from "react"
+import React, { PropsWithChildren, useCallback, useEffect, useMemo } from "react"
 import { ConfigContext, ConfigConsumer } from "./context"
 import type { ConfigConsumerProps } from "./types"
 
 interface ConfigProviderProps {
 	prefixCls?: string
+	theme?: "light" | "dark"
 }
 
 interface ProviderChildrenProps extends ConfigProviderProps {
@@ -22,9 +23,11 @@ function ProviderChildren(props: PropsWithChildren<ProviderChildrenProps>) {
 		return suffixCls ? `${ mergedPrefixCls }-${ suffixCls }` : mergedPrefixCls
 	}, [props?.parentContext, props?.prefixCls])
 	
-	const value = useMemo(() => {
-		return {getPrefixCls}
-	}, [getPrefixCls])
+	const value = useMemo(() => ({getPrefixCls, theme: props?.theme || "light"}), [getPrefixCls, props?.theme])
+	
+	useEffect(() => {
+		document.getElementsByTagName("body")[0].setAttribute("theme-mode", value?.theme)
+	}, [value?.theme])
 	
 	return (
 		<ConfigContext.Provider value={ value }>
