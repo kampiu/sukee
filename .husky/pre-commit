@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 设置颜色变量
+GREEN='\033[32m'
+YELLOW='\033[33m'
+NC='\033[0m'
+
+echo -e "\r${YELLOW}⌛️ running pre-commit checks ...${NC}\c"
+
+sleep 1
+npx lint-staged -q
+
+echo -e "\r${GREEN}🎉 pre-commit executed successfully!\r${NC}"
