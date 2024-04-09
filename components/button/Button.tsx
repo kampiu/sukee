@@ -1,29 +1,29 @@
-import React from "react"
 import clsx from "clsx"
+import React from "react"
 import { useConfig } from "../config-provider"
 
 type MergedHTMLAttributes = Omit<
 	React.HTMLAttributes<HTMLElement> &
-	React.ButtonHTMLAttributes<HTMLElement> &
-	React.AnchorHTMLAttributes<HTMLElement>,
+		React.ButtonHTMLAttributes<HTMLElement> &
+		React.AnchorHTMLAttributes<HTMLElement>,
 	"type"
->;
+>
 
 export interface ButtonProps extends MergedHTMLAttributes {
-	type?: "default" | "dashed" | "link" | "text" | "light";
-	theme?: "primary" | "secondary" | "tertiary" | "warning" | "danger";
-	icon?: React.ReactNode;
-	disabled?: boolean;
-	loading?: boolean | { delay?: number };
-	prefixCls?: string;
-	className?: string;
-	block?: boolean;
+	type?: "default" | "dashed" | "link" | "text" | "light"
+	theme?: "primary" | "secondary" | "tertiary" | "warning" | "danger"
+	icon?: React.ReactNode
+	disabled?: boolean
+	loading?: boolean | { delay?: number }
+	prefixCls?: string
+	className?: string
+	block?: boolean
 	/** 内容 */
-	children?: React.ReactNode | string;
-	
-	[key: `data-${ string }`]: string;
-	
-	styles?: { icon: React.CSSProperties };
+	children?: React.ReactNode | string
+
+	[key: `data-${string}`]: string
+
+	styles?: { icon: React.CSSProperties }
 	htmlType?: "button" | "submit" | "reset"
 }
 
@@ -37,31 +37,28 @@ function Button(props: ButtonProps) {
 		theme = "primary",
 		type = "default"
 	} = props
-	
-	const {getPrefixCls, theme: globalTheme} = useConfig()
+
+	const { getPrefixCls } = useConfig()
 	const prefixCls = getPrefixCls("button", customizePrefixCls)
-	
-	const onClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => {
+
+	const onClick = (
+		event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>
+	) => {
 		if (disabled) {
 			event.preventDefault()
 			return
 		}
 		props?.onClick?.(event)
 	}
-	
-	const classes = clsx(
-		prefixCls,
-		className,
-		`${ prefixCls }-${ theme }`,
-		`${ prefixCls }-${ type }`,
-		{
-			[`${ prefixCls }-disabled`]: disabled
-		}
-	)
-	
-	console.log("-->===", globalTheme)
+
+	const classes = clsx(prefixCls, className, `${prefixCls}-${theme}`, `${prefixCls}-${type}`, {
+		[`${prefixCls}-disabled`]: disabled
+	})
+
 	return (
-		<button theme-mode={globalTheme} type={ htmlType } onClick={ onClick } className={ classes } disabled={ disabled }>{ children }</button>
+		<button type={htmlType} onClick={onClick} className={classes} disabled={disabled}>
+			{children}
+		</button>
 	)
 }
 
