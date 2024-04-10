@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import type { CSSProperties, InputHTMLAttributes, ReactNode } from "react"
 import React from "react"
-import { useConfig } from "sukee/es/config-provider"
+import { useConfig } from "../config-provider"
 
 export interface InputProps
 	extends Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "prefix" | "type"> {
