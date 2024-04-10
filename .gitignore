@@ -12,4 +12,4 @@ docs
 .editorconfig
 .dumi/tmp-production
 .dumi/tmp
-./coverage
+coverage
