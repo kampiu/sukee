@@ -1,9 +1,10 @@
 import clsx from "clsx"
-import type { CSSProperties, ReactNode } from "react"
+import type { CSSProperties, InputHTMLAttributes, ReactNode } from "react"
 import React from "react"
 import { useConfig } from "sukee/es/config-provider"
 
-export interface InputProps {
+export interface InputProps
+	extends Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "prefix" | "type"> {
 	placeholder?: string
 	disabled?: boolean
 	prefixCls?: string
@@ -24,7 +25,9 @@ function Input(props: InputProps) {
 		addonAfter,
 		addonBefore,
 		prefix,
-		suffix
+		suffix,
+		value,
+		onChange
 	} = props
 
 	const { getPrefixCls } = useConfig()
@@ -34,36 +37,18 @@ function Input(props: InputProps) {
 		[`${prefixCls}-disabled`]: disabled
 	})
 
-	// let element = <input className={ prefixCls } type="text" placeholder={ placeholder }/>
-
-	// ================== Prefix & Suffix ================== //
-	// if (prefix || suffix) {
-	// 	element = (
-	// 		<span className={`${prefixCls}-wrapper`}>
-	// 			{prefix && <span className={`${prefixCls}-prefix`}>{prefix}</span>}
-	// 			{element}
-	// 			{suffix && <span className={`${prefixCls}-suffix`}>{suffix}</span>}
-	// 		</span>
-	// 	)
-	// }
-	// if (addonAfter || addonBefore) {
-	// 	element = (
-	// 		<span className={mergeClassName}>
-	// 			{addonAfter && <span className={`${prefixCls}-addon`}>{addonAfter}</span>}
-	// 			<span className={`${prefixCls}-addon`}>{addonAfter}</span>
-	// 			{element}
-	// 			{addonBefore && <span className={`${prefixCls}-addon`}>{addonBefore}</span>}
-	// 			<span className={`${prefixCls}-addon`}>{addonBefore}</span>
-	// 		</span>
-	// 	)
-	// }
-
 	return (
 		<span className={mergeClassName}>
 			{addonAfter && <span className={`${prefixCls}-addon`}>{addonAfter}</span>}
 			<span className={`${prefixCls}-wrapper`}>
 				{prefix && <span className={`${prefixCls}-prefix`}>{prefix}</span>}
-				<input className={prefixCls} type="text" placeholder={placeholder} />
+				<input
+					onChange={onChange}
+					value={value}
+					className={prefixCls}
+					type="text"
+					placeholder={placeholder}
+				/>
 				{suffix && <span className={`${prefixCls}-suffix`}>{suffix}</span>}
 			</span>
 			{addonBefore && <span className={`${prefixCls}-addon`}>{addonBefore}</span>}

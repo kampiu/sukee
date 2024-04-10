@@ -1,7 +1,7 @@
 ---
 category: Components
 group:
-    title: 通用
+    title: 表单
     order: 2
 title: Input
 subtitle: 输入框
