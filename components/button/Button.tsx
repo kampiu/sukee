@@ -1,31 +1,7 @@
 import clsx from "clsx"
 import React from "react"
 import { useConfig } from "../config-provider"
-
-type MergedHTMLAttributes = Omit<
-	React.HTMLAttributes<HTMLElement> &
-		React.ButtonHTMLAttributes<HTMLElement> &
-		React.AnchorHTMLAttributes<HTMLElement>,
-	"type"
->
-
-export interface ButtonProps extends MergedHTMLAttributes {
-	type?: "default" | "dashed" | "link" | "text" | "light"
-	theme?: "primary" | "secondary" | "tertiary" | "warning" | "danger"
-	icon?: React.ReactNode
-	disabled?: boolean
-	loading?: boolean | { delay?: number }
-	prefixCls?: string
-	className?: string
-	block?: boolean
-	/** 内容 */
-	children?: React.ReactNode | string
-
-	[key: `data-${string}`]: string
-
-	styles?: { icon: React.CSSProperties }
-	htmlType?: "button" | "submit" | "reset"
-}
+import type { ButtonProps } from "./types"
 
 function Button(props: ButtonProps) {
 	const {
@@ -51,12 +27,18 @@ function Button(props: ButtonProps) {
 		props?.onClick?.(event)
 	}
 
-	const classes = clsx(prefixCls, className, `${prefixCls}-${theme}`, `${prefixCls}-${type}`, {
-		[`${prefixCls}-disabled`]: disabled
-	})
+	const mergeClassName = clsx(
+		prefixCls,
+		className,
+		`${prefixCls}-${theme}`,
+		`${prefixCls}-${type}`,
+		{
+			[`${prefixCls}-disabled`]: disabled
+		}
+	)
 
 	return (
-		<button type={htmlType} onClick={onClick} className={classes} disabled={disabled}>
+		<button type={htmlType} onClick={onClick} className={mergeClassName} disabled={disabled}>
 			{children}
 		</button>
 	)

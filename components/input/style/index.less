@@ -1,0 +1,127 @@
+@import "../../style/variable";
+
+@input-prefix-cls: ~"@{sukee-prefix}-input";
+
+.@{input-prefix-cls} {
+	padding: 0;
+	font-size: @sukee-font-size-regular;
+	line-height: 1.52;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	background: 0 0;
+	color: @sukee-color-text-0;
+	width: 100%;
+	margin-bottom: 0;
+	text-align: inherit;
+	text-overflow: ellipsis;
+
+	&:not(:last-child) .ant-input {
+		border-start-end-radius: 0;
+		border-end-end-radius: 0;
+	}
+
+	&:not(:first-child) .ant-input {
+		border-start-start-radius: 0;
+		border-end-start-radius: 0;
+	}
+
+	&::placeholder {
+		color: @sukee-color-text-3;
+		user-select: none; // https://github.com/ant-design/ant-design/pull/32639
+	}
+
+	&:placeholder-shown {
+		text-overflow: ellipsis;
+	}
+
+	&-group {
+		box-sizing: border-box;
+		margin: 0;
+		font-variant: tabular-nums;
+		list-style: none;
+		font-feature-settings: "tnum";
+		position: relative;
+		width: 100%;
+		line-height: 1.52;
+		transition: all .3s;
+		display: table;
+		border-collapse: separate;
+		border-spacing: 0;
+	}
+
+	&-addon {
+		display: table-cell;
+		width: 1px;
+		white-space: nowrap;
+		vertical-align: middle;
+		position: relative;
+		padding: 0 11px;
+		color: @sukee-color-text-0;
+		font-weight: 400;
+		font-size: @sukee-font-size-regular;
+		text-align: center;
+		border-radius: @sukee-border-radius-medium;
+		transition: all 0.3s;
+		line-height: 1;
+		background: rgba(0, 0, 0, 0.02);
+		border: 1px solid @sukee-color-border;
+
+		&:first-child {
+			border-start-end-radius: 0;
+			border-end-end-radius: 0;
+			border-inline-end: 0;
+		}
+
+		&:last-child {
+			border-start-start-radius: 0;
+			border-end-start-radius: 0;
+			border-inline-start: 0;
+		}
+	}
+
+	&-wrapper {
+		position: relative;
+		display: inline-flex;
+		width: 100%;
+		min-width: 0;
+		padding: 4px 11px;
+		color: @sukee-color-text-0;
+		font-size: @sukee-font-size-regular;
+		line-height: 1.52;
+		border-radius: @sukee-border-radius-medium;
+		transition: all 0.1s;
+
+		background-color: @sukee-color-background-0;
+		border-width: 1px;
+		border-style: solid;
+		border-color: @sukee-color-border;
+
+		&:not(:first-child) {
+			border-start-start-radius: 0;
+			border-end-start-radius: 0;
+		}
+
+		&:not(:last-child) {
+			border-start-end-radius: 0;
+			border-end-end-radius: 0;
+		}
+	}
+
+
+	&-prefix, &-suffix {
+		display: flex;
+		flex: none;
+		align-items: center;
+	}
+
+	&-prefix {
+		margin-inline-end: 6px;
+	}
+
+	&-suffix {
+		margin-inline-start: 6px;
+	}
+
+
+}
