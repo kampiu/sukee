@@ -1,0 +1,88 @@
+@import "../../style/variable";
+
+@spin-prefix-cls: ~"@{sukee-prefix}-spin";
+
+@keyframes sukee-animation-rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.@{spin-prefix-cls} {
+	display: inline-block;
+
+	&-container {
+		position: relative;
+	}
+
+	&-main {
+		position: relative;
+		transition: opacity 0.3s;
+		opacity: 0.6;
+	}
+
+	&-wrapper {
+		position: absolute;
+		top: 0;
+		inset-inline-start: 0;
+		z-index: 4;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: @sukee-color-overlay-background;
+
+		& > .@{spin-prefix-cls}-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&-content {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&-icon {
+		font-size: @sukee-font-size-header-4;
+		width: @sukee-font-size-header-4;
+		height: @sukee-font-size-header-4;
+		color: @sukee-color-primary;
+
+		& > svg {
+			animation: sukee-animation-rotate .6s linear infinite;
+			animation-fill-mode: forwards;
+			vertical-align: top;
+		}
+	}
+
+	&-text {
+		font-size: @sukee-font-size-regular;
+		color: @sukee-color-primary;
+	}
+
+	&-sm {
+		font-size: @sukee-font-size-regular;
+		width: @sukee-font-size-regular;
+		height: @sukee-font-size-regular;
+	}
+
+	&-md {
+		font-size: @sukee-font-size-header-4;
+		width: @sukee-font-size-header-4;
+		height: @sukee-font-size-header-4;
+	}
+
+	&-lg {
+		font-size: @sukee-font-size-header-1;
+		width: @sukee-font-size-header-1;
+		height: @sukee-font-size-header-1;
+	}
+}

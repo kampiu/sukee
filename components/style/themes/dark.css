@@ -250,6 +250,8 @@ body[theme-mode="dark"] {
 	--sukee-color-background-3: rgba(67, 68, 74, 1);
 	--sukee-color-background-4: rgba(79, 81, 89, 1);
 
+	--semi-color-overlay-background: rgba(22, 22, 26, 0.4);
+
 	--sukee-color-fill-0: rgba(255, 255, 255, 0.12);
 	--sukee-color-fill-1: rgba(255, 255, 255, 0.16);
 	--sukee-color-fill-2: rgba(255, 255, 255, 0.2);
