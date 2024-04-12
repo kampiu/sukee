@@ -7,10 +7,10 @@
     > dt {
       height: 30px;
       padding: 0 16px;
+      color: @c-text-secondary;
       font-weight: bold;
       font-size: 14px;
       line-height: 30px;
-      color: @c-text-secondary;
       background-color: @c-border-light;
 
       @{dark-selector} & {
@@ -46,16 +46,16 @@
       > a {
         position: relative;
         display: flex;
-        height: 60px;
         flex-direction: column;
         justify-content: center;
+        box-sizing: border-box;
+        height: 60px;
         padding-top: 6px;
         padding-bottom: 8px;
+        text-decoration: none;
+        border-radius: 4px;
         padding-inline-start: 54px;
         padding-inline-end: 12px;
-        text-decoration: none;
-        box-sizing: border-box;
-        border-radius: 4px;
 
         &[data-active],
         &:hover {
@@ -86,10 +86,10 @@
         > svg {
           position: absolute;
           top: 14px;
-          inset-inline-start: 14px;
           width: 32px;
           height: 32px;
           fill: darken(@c-border, 5%);
+          inset-inline-start: 14px;
 
           @{dark-selector} & {
             fill: lighten(@c-border-dark, 5%);
@@ -99,10 +99,10 @@
         > h4,
         > p {
           margin: 0;
+          overflow: hidden;
           line-height: 1.4;
           white-space: nowrap;
           text-overflow: ellipsis;
-          overflow: hidden;
         }
 
         > h4 {
@@ -116,8 +116,8 @@
 
         > p {
           margin-top: 2px;
-          font-size: 13px;
           color: @c-text-note;
+          font-size: 13px;
 
           @{dark-selector} & {
             color: @c-text-note-dark;
@@ -132,10 +132,10 @@
   }
 
   mark {
-    color: rgb(72, 70, 7);
     padding: 0 2px;
-    border-radius: 2px;
+    color: rgb(72, 70, 7);
     background-color: rgb(255, 249, 197);
+    border-radius: 2px;
 
     @{dark-selector} & {
       color: rgb(147, 145, 71);
@@ -145,9 +145,9 @@
 
   .@{prefix}-search-empty {
     display: flex;
-    height: 140px;
     align-items: center;
     justify-content: center;
+    height: 140px;
     color: @c-text-note;
     font-size: 16px;
 
@@ -156,8 +156,8 @@
     }
 
     > svg {
-      margin-inline-end: 8px;
       width: 48px;
+      margin-inline-end: 8px;
       //fill: lighten(@c-text-note, 20%);
 
       @{dark-selector} & {

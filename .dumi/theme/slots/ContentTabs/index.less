@@ -1,12 +1,12 @@
 @import (reference) '../../styles/variables.less';
 
 .@{prefix}-content-tabs {
-  list-style-type: none;
   display: flex;
   align-items: center;
   height: 60px;
   margin: -@s-content-padding -@s-content-padding @s-content-padding -@s-content-padding;
   padding: 0 @s-content-padding;
+  list-style-type: none;
   border-bottom: 1px solid @c-border-light;
 
   @{dark-selector} & {
@@ -14,9 +14,9 @@
   }
 
   @media @mobile {
+    height: 42px;
     margin: -24px -24px 24px;
     padding: 0 24px;
-    height: 42px;
   }
 
   [data-no-sidebar] & {
@@ -32,12 +32,12 @@
     height: inherit;
 
     > button {
-      padding: 0;
       height: inherit;
+      padding: 0;
       color: @c-text-secondary;
       font-size: 17px;
-      border: 0;
       background: transparent;
+      border: 0;
       cursor: pointer;
       transition: all 0.2s;
 
@@ -74,13 +74,13 @@
       }
 
       &::after {
-        content: '';
         position: absolute;
-        left: 0;
         right: 0;
         bottom: -1px;
+        left: 0;
         height: 1px;
         background-color: @c-primary;
+        content: '';
 
         @{dark-selector} & {
           background-color: @c-primary-dark;

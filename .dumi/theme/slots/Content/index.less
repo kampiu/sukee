@@ -46,11 +46,11 @@
 
 	// pre tag
 	pre {
-		background-color: tint(@c-site-bg, 50%);
 		padding: 12px 20px;
 		font-size: 13px;
 		line-height: 2;
 		direction: ltr;
+		background-color: tint(@c-site-bg, 50%);
 
 		@{dark-selector} & {
 			background-color: shade(@c-site-bg-dark, 50%);
@@ -60,9 +60,9 @@
 	// table
 	& table {
 		width: 100%;
-		table-layout: auto;
 		overflow: auto hidden;
 		direction: ltr;
+		table-layout: auto;
 		empty-cells: show;
 		border: 1px solid rgba(5, 5, 5, 0.06);
 		border-collapse: collapse;
@@ -110,15 +110,15 @@
 
 	// blockquote
 	blockquote {
-		font-style: normal;
-		margin-inline-start: 0;
-		margin-inline-end: 0;
 		margin: 0.5em 0;
 		padding-left: 16px;
+		font-size: 14px;
+		font-style: normal;
+		line-height: 1.5;
 		background-color: tint(@c-site-bg, 50%);
 		border-left: 5px solid @c-border-light;
-		font-size: 14px;
-		line-height: 1.5;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
 
 		@{dark-selector} & {
 			background-color: shade(@c-site-bg-dark, 50%);
@@ -128,10 +128,10 @@
 
 	// list
 	& ul > li {
-		line-height: 2;
-		font-size: 14px;
 		margin-left: 20px;
 		padding-left: 4px;
+		font-size: 14px;
+		line-height: 2;
 		list-style-type: circle;
 	}
 
@@ -156,13 +156,13 @@
 		> a[aria-hidden]:first-child {
 			float: left;
 			width: 20px;
-			padding-inline-end: 4px;
-			margin-inline-start: -24px;
 			color: @c-text;
 			// hide phantom blank node
 			font-size: 0;
-			text-align: right;
 			line-height: inherit;
+			text-align: right;
+			padding-inline-end: 4px;
+			margin-inline-start: -24px;
 
 			@{dark-selector} & {
 				color: @c-text-dark;
@@ -177,9 +177,9 @@
 			}
 
 			> .icon-link::before {
-				content: '#';
 				color: @c-text-secondary;
 				font-size: 20px;
+				content: '#';
 
 				@{dark-selector} & {
 					color: @c-text-secondary-dark;
@@ -193,10 +193,10 @@
 	}
 
 	h1 {
-		font-size: 30px;
 		margin-bottom: 0.5em;
-		line-height: 1.2105263157894737;
 		font-weight: 600;
+		font-size: 30px;
+		line-height: 1.2105263157894737;
 	}
 
 	// horizontal line
@@ -213,16 +213,16 @@
 	display: flex;
 	flex: 1;
 	flex-direction: column;
+	box-sizing: border-box;
 	min-width: 0;
 	max-width: 100%;
-	box-sizing: border-box;
 
 	&:not([data-no-sidebar]) {
 		padding: @s-content-padding @s-content-padding 0;
-		background-color: #FFFFFF;
+		background-color: #FFF;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
-		box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 5%);
+		box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.05);
 
 		@{dark-selector} & {
 			background-color: lighten(@c-site-bg-dark, 3%);

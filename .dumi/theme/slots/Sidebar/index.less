@@ -3,27 +3,27 @@
 .@{prefix}-sidebar {
   position: sticky;
   top: @s-header-height;
+  box-sizing: border-box;
   width: @s-sidebar-width;
   max-height: calc(100vh - @s-header-height);
   padding-top: 20px;
   padding-bottom: 24px;
+  overflow: auto;
   padding-inline-start: 8px;
   padding-inline-end: 32px;
-  box-sizing: border-box;
-  overflow: auto;
 
   @media @mobile {
     position: fixed;
-    z-index: 20;
     top: 0;
-    left: 0;
     bottom: 0;
+    left: 0;
+    z-index: 20;
     max-height: initial;
-    padding-inline-start: 32px;
     background-color: @c-site-bg;
     border-top: 1px solid @c-border-light;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 10%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: 0.2s all;
+    padding-inline-start: 32px;
 
     @{dark-selector} & {
       background-color: @c-site-bg-dark;
@@ -31,9 +31,9 @@
     }
 
     .@{prefix}-doc-layout:not([data-mobile-sidebar-active]) & {
-      opacity: 0;
-      visibility: hidden;
       transform: translateX(-100%);
+      visibility: hidden;
+      opacity: 0;
     }
   }
 
@@ -44,13 +44,13 @@
 
     > dt {
       margin: 8px 0;
-      color: @c-text;
-      font-size: 14px;
-      font-weight: bold;
-      white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
+      color: @c-text;
+      font-weight: bold;
+      font-size: 14px;
+      white-space: nowrap;
       text-transform: uppercase;
+      text-overflow: ellipsis;
 
       @{dark-selector} & {
         color: @c-text-dark;
@@ -63,14 +63,14 @@
 
       > a {
         display: block;
+        overflow: hidden;
         color: @c-text-secondary;
         font-size: 16px;
         line-height: 20px;
-        text-decoration: none;
-        transition: all 0.3s;
         white-space: nowrap;
-        overflow: hidden;
+        text-decoration: none;
         text-overflow: ellipsis;
+        transition: all 0.3s;
 
         @{dark-selector} & {
           color: @c-text-secondary-dark;

@@ -4,9 +4,9 @@
 .@{prefix}-previewer {
   &-actions {
     display: flex;
-    height: 32px;
     align-items: center;
     justify-content: center;
+    height: 32px;
 
     &:not(:last-child) {
       border-bottom: 1px dashed @c-border-light;
@@ -24,14 +24,14 @@
     width: 24px;
     height: 24px;
     padding: 0;
-    border: 0;
     background: transparent;
+    border: 0;
     cursor: pointer;
 
     > svg {
       width: 16px;
-      fill: darken(@c-border, 20%);
       transition: fill 0.2s;
+      fill: darken(@c-border, 20%);
 
       @{dark-selector} & {
         fill: lighten(@c-border-dark, 20%);
@@ -54,11 +54,11 @@
   &-action-sketch {
     > select {
       position: absolute;
-      appearance: none;
       width: 100%;
       height: 100%;
-      opacity: 0;
       cursor: pointer;
+      opacity: 0;
+      appearance: none;
     }
 
     &[data-copied] > svg {
@@ -71,13 +71,13 @@
     padding: 0 12px;
 
     &::after {
-      content: '';
       position: absolute;
-      left: 0;
       bottom: 0;
+      left: 0;
       width: 100%;
       height: 0;
       border-bottom: 1px dashed @c-border-light;
+      content: '';
 
       @{dark-selector} & {
         border-bottom-color: @c-border-less-dark;
@@ -102,15 +102,15 @@
 
     &-wrap {
       display: flex;
-      white-space: nowrap;
       overflow: hidden;
+      white-space: nowrap;
 
       &&-ping-left {
-        box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 10%) inset;
+        box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.1) inset;
       }
 
       &&-ping-right ~ * > .@{prefix}-tabs-nav-more {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 10%);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
       }
     }
 
@@ -123,9 +123,9 @@
 
     &-more {
       height: 100%;
-      cursor: pointer;
       background: none;
       border: 0;
+      cursor: pointer;
       transition: box-shadow 0.2s;
     }
   }
@@ -135,14 +135,14 @@
     margin: 0 12px;
 
     &-btn {
+      box-sizing: border-box;
       padding: 0;
       color: @c-text-secondary;
       font-size: 14px;
       line-height: 36px;
+      background: transparent;
       border: 0;
       outline: none;
-      background: transparent;
-      box-sizing: border-box;
       cursor: pointer;
       transition: all 0.2s;
 
@@ -182,19 +182,19 @@
 
   &-dropdown {
     position: absolute;
-    background: inherit;
-    border: 1px solid @c-border;
     max-height: 200px;
     overflow: auto;
+    background: inherit;
+    border: 1px solid @c-border;
 
     @{dark-selector} & {
       border-color: @c-border-dark;
     }
 
     > ul {
-      list-style: none;
       margin: 0;
       padding: 0;
+      list-style: none;
 
       > li {
         padding: 4px 12px;

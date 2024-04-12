@@ -14,9 +14,6 @@ module.exports = {
 				ignoreAtRules: ["plugin"]
 			}
 		],
-		"media-query-no-invalid": null,
-		"less/color-no-invalid-hex": true,
-		"less/no-duplicate-variables": true,
 		"function-name-case": ["lower", { ignoreFunctions: [] }],
 		"function-no-unknown": [
 			true,

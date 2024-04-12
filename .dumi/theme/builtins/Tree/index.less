@@ -4,14 +4,14 @@
 
 .@{prefix}-tree {
   @bg-color: tint(@c-site-bg, 50%);
+  margin: 24px 0 32px;
 
   padding: 16px;
-  margin: 24px 0 32px;
+  overflow-y: auto;
+  color: @c-text;
   background: @bg-color;
   border: 1px solid @c-border-light;
   border-radius: 2px;
-  color: @c-text;
-  overflow-y: auto;
 
   @{dark-selector} & {
     @bg-color: shade(@c-site-bg-dark, 50%);
@@ -39,10 +39,10 @@
   }
 
   &.@{treePrefixCls} {
-    transition: all 0.3s;
+    font-size: 14px;
     line-height: 1.5715;
     list-style: none;
-    font-size: 14px;
+    transition: all 0.3s;
 
     .@{treeNodePrefixCls} {
       position: relative;
@@ -79,6 +79,7 @@
 
     .@{treeNodePrefixCls} span.@{treePrefixCls}-switcher {
       display: flex;
+      flex-shrink: 0;
       align-items: center;
       justify-content: center;
       width: 24px;
@@ -87,7 +88,6 @@
       line-height: @treeNode-size;
       background: transparent;
       cursor: pointer;
-      flex-shrink: 0;
     }
 
     .@{treeNodePrefixCls} .@{treePrefixCls}-node-content-wrapper {
@@ -96,8 +96,8 @@
       margin: 0;
       padding: 0 4px;
       line-height: @treeNode-size;
-      cursor: pointer;
       white-space: nowrap;
+      cursor: pointer;
       .@{treePrefixCls}-iconEle {
         margin-right: 6px;
         vertical-align: 0;
@@ -107,9 +107,9 @@
     &.@{treePrefixCls}-show-line {
       .@{treePrefixCls}-indent {
         display: inline-block;
+        flex-shrink: 0;
         height: 0;
         vertical-align: bottom;
-        flex-shrink: 0;
 
         &-unit {
           position: relative;
@@ -169,10 +169,10 @@
   }
 
   &-icon {
+    display: inline-block;
     width: 16px;
     color: @c-text;
     vertical-align: -0.225em;
-    display: inline-block;
 
     @{dark-selector} & {
       color: @c-text-dark;

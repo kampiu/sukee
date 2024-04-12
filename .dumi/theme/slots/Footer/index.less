@@ -2,16 +2,16 @@
 
 .@{prefix}-footer {
   margin-top: @s-content-padding;
-  border-top: 1px solid @c-border-light;
+  padding: @s-content-padding * 0.4 0;
   color: @c-text-note;
   font-size: 12px;
   line-height: 26px;
   text-align: center;
-  padding: @s-content-padding * 0.4 0;
+  border-top: 1px solid @c-border-light;
 
   @{dark-selector} & {
-    border-top-color: @c-border-less-dark;
     color: @c-text-note-dark;
+    border-top-color: @c-border-less-dark;
   }
 
   @media @mobile {

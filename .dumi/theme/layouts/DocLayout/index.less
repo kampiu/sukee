@@ -24,20 +24,20 @@ body {
 
   @media @mobile {
     &::before {
-      content: '';
       position: fixed;
-      z-index: 11; // 1 more than header
       top: 0;
       right: 0;
-      left: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 50%);
+      left: 0;
+      z-index: 11; // 1 more than header
+      background-color: rgba(0, 0, 0, 0.5);
       transition: all 0.1s;
+      content: '';
     }
 
     &:not([data-mobile-sidebar-active])::before {
-      opacity: 0;
       visibility: hidden;
+      opacity: 0;
     }
   }
 
@@ -45,21 +45,21 @@ body {
     @height: 36px;
 
     position: sticky;
-    z-index: 9; // 1 less than header
     top: @s-header-height-m;
-    left: 0;
     right: 0;
+    left: 0;
+    z-index: 9; // 1 less than header
     display: none;
     align-items: center;
-    padding: 0 24px;
     height: @height;
-    border-top: 1px solid @c-border-light;
+    padding: 0 24px;
     background-color: fadeout(@c-site-bg, 10%);
+    border-top: 1px solid @c-border-light;
     backdrop-filter: blur(6px);
 
     @{dark-selector} & {
-      border-top-color: @c-border-less-dark;
       background-color: fadein(@c-site-bg-dark, 10%);
+      border-top-color: @c-border-less-dark;
     }
 
     @media @mobile {
@@ -69,8 +69,8 @@ body {
     .@{prefix}-sidebar-btn {
       padding: 0;
       color: @c-text-secondary;
-      border: 0;
       background-color: transparent;
+      border: 0;
 
       @{dark-selector} & {
         color: @c-text-secondary-dark;
@@ -79,8 +79,8 @@ body {
       > svg {
         width: 16px;
         margin-right: 6px;
-        fill: @c-text-secondary;
         vertical-align: middle;
+        fill: @c-text-secondary;
 
         @{dark-selector} & {
           fill: @c-text-secondary-dark;
@@ -92,10 +92,10 @@ body {
   > main {
     display: flex;
     align-items: flex-start;
+    box-sizing: border-box;
+    max-width: @s-content-width;
     margin: 0 auto;
     padding: 0 24px;
-    max-width: @s-content-width;
-    box-sizing: border-box;
 
     > section {
       flex: 1;
@@ -106,9 +106,9 @@ body {
       position: sticky;
       top: @s-header-height + 30px;
       width: @s-sidebar-width;
-      margin-inline-start: 24px;
       max-height: 80vh;
       overflow: auto;
+      margin-inline-start: 24px;
       overscroll-behavior: contain;
       -webkit-overflow-scrolling: touch;
 

@@ -2,9 +2,9 @@
 
 .@{prefix}-previewer {
 	margin: 24px 0 32px;
+	background-color: inherit;
 	border: 1px solid @c-border-light;
 	border-radius: 4px;
-	background-color: inherit;
 
 	@{dark-selector} & {
 		border-color: @c-border-less-dark;
@@ -23,9 +23,9 @@
 	}
 
 	&-demo {
+		padding: 40px 24px;
 		border-top-left-radius: 2px;
 		border-top-right-radius: 2px;
-		padding: 40px 24px;
 
 		> iframe {
 			display: block;
@@ -41,10 +41,10 @@
 			overflow: hidden;
 
 			&::before {
-				content: '';
 				display: block;
 				height: 24px;
 				background-color: @c-border-light;
+				content: '';
 
 				@{dark-selector} & {
 					background-color: @c-border-less-dark;
@@ -54,18 +54,17 @@
 			&::after {
 				@btn-gap: 8px;
 				@btn-width: 12px;
-
-				content: '';
 				position: absolute;
 				top: 5px;
 				left: @btn-gap;
 				display: inline-block;
 				width: @btn-width;
 				height: @btn-width;
-				border-radius: 50%;
 				background-color: #FD6458;
+				border-radius: 50%;
 				box-shadow: (@btn-width + @btn-gap) 0 0 #FFBF2B,
 					(@btn-width + @btn-gap) * 2 0 0 #24CC3D;
+				content: '';
 			}
 		}
 
@@ -94,7 +93,7 @@
 		position: relative;
 
 		> .markdown {
-			padding: 10px 24px 0 24px;
+			padding: 10px 24px 0;
 			border-bottom: 1px dashed @c-border-light;
 
 			@{dark-selector} & {
@@ -106,22 +105,22 @@
 			position: absolute;
 			top: -7px;
 			left: 20px;
+			display: inline-block;
 			margin: 0;
 			padding: 0 4px;
-			display: inline-block;
+			font-weight: bold;
 			font-size: 14px;
 			line-height: 1;
-			font-weight: bold;
 			background: linear-gradient(to top,
-			rgba(255, 255, 255, 100%),
-			rgba(255, 255, 255, 100%) 50%,
-			rgba(255, 255, 255, 0%)) 100%;
+			rgba(255, 255, 255, 1),
+			rgba(255, 255, 255, 1) 50%,
+			rgba(255, 255, 255, 0)) 100%;
 
 			@{dark-selector} & {
 				background: linear-gradient(to top,
-				rgba(0, 0, 0, 95%),
-				rgba(0, 0, 0, 95%) 50%,
-				rgba(0, 0, 0, 0%)) 100%;
+				rgba(0, 0, 0, 0.95),
+				rgba(0, 0, 0, 0.95) 50%,
+				rgba(0, 0, 0, 0)) 100%;
 			}
 
 			> a {
@@ -137,10 +136,10 @@
 
 				> strong {
 					float: inline-start;
-					padding-inline-end: 8px;
 					color: @c-warning;
 					font-size: 12px;
 					line-height: 15px;
+					padding-inline-end: 8px;
 
 					@{dark-selector} & {
 						color: @c-warning-dark;
@@ -152,12 +151,12 @@
 
 	// active
 	&[data-active] {
-		box-shadow: 0 0 0 4px fade(@c-primary, 10%);
 		border-color: lighten(@c-primary, 20%);
+		box-shadow: 0 0 0 4px fade(@c-primary, 10%);
 
 		@{dark-selector} & {
-			box-shadow: 0 0 0 4px fade(@c-primary-dark, 10%);
 			border-color: darken(@c-primary-dark, 20%);
+			box-shadow: 0 0 0 4px fade(@c-primary-dark, 10%);
 		}
 	}
 

@@ -21,7 +21,7 @@
 	@bg-color: tint(@c-site-bg, 50%);
 
 	position: relative;
-	margin: 1em 0px;
+	margin: 1em 0;
 	background-color: rgba(0, 0, 0, 0.04);
 	border-radius: 6px;
 
@@ -49,24 +49,24 @@
 				position: relative;
 
 				&::after {
-					content: '';
 					position: absolute;
 					top: 0;
 					right: -24px;
 					bottom: 0;
 					width: 24px;
 					background-color: shade(@bg-color, 5%);
+					content: '';
 				}
 			}
 
 			&::after {
-				content: '';
 				position: absolute;
 				top: 0;
-				left: -24px;
 				bottom: 0;
+				left: -24px;
 				width: 24px;
 				background-color: shade(@bg-color, 5%);
+				content: '';
 			}
 		}
 
@@ -75,10 +75,10 @@
 
 			& > .token-line-num {
 				display: table-cell;
-				text-align: right;
 				padding-right: 1em;
-				user-select: none;
+				text-align: right;
 				opacity: 0.5;
+				user-select: none;
 			}
 
 			& > .line-cell {
@@ -107,8 +107,8 @@
 	}
 
 	&:not(:hover) &-copy {
-		opacity: 0;
 		visibility: hidden;
+		opacity: 0;
 	}
 
 	@{dark-selector} & {

@@ -7,10 +7,10 @@
 
   @media screen and (max-width: 1430px) {
     &::before {
-      left: auto;
       right: auto;
-      inset-inline-end: -15px;
+      left: auto;
       transform: none;
+      inset-inline-end: -15px;
 
       [class*='-switch'] + &,
       [class*='-select'] + & {
@@ -50,12 +50,12 @@
 
   select {
     position: absolute;
-    inset: 0 15%;
-    opacity: 0;
     width: 100%;
     min-width: 16px;
     max-width: 70%;
     height: 16px;
     cursor: pointer;
+    opacity: 0;
+    inset: 0 15%;
   }
 }

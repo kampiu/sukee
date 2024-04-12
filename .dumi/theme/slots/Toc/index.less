@@ -1,9 +1,9 @@
 @import (reference) '../../styles/variables.less';
 
 .@{prefix}-toc {
-  list-style: none;
   margin: 12px 0 0;
   padding: 4px 0;
+  list-style: none;
   border-inline-start: 1px solid @c-border;
 
   @{dark-selector} & {
@@ -19,12 +19,12 @@
       display: block;
       margin: 6px 0;
       padding: 3px 12px;
+      overflow: hidden;
       color: @c-text-secondary;
       font-size: 13px;
       line-height: 1;
-      text-decoration: none;
       white-space: nowrap;
-      overflow: hidden;
+      text-decoration: none;
       text-overflow: ellipsis;
 
       @{dark-selector} & {
@@ -40,8 +40,8 @@
       }
 
       &.active {
-        margin-inline-start: -1px;
         color: @c-text;
+        margin-inline-start: -1px;
         border-inline-start: 1px solid @c-primary;
 
         @{dark-selector} & {
