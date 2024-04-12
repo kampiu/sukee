@@ -9,17 +9,19 @@ NC='\033[0m'
 
 echo -e "\r${YELLOW}⌛️ running commit-msg checks ...${NC}\c"
 
-# 钩子脚本接收一个参数，即包含 commit message 的临时文件的路径
-commit_message_file="$1"
-# 读取提交信息
-commit_message=$(<"$commit_message_file")
+npm run commitlint
 
-sleep 1
-
-# 检查提交信息是否符合规范
-if ! echo "$commit_message" | grep -qE '^(feat|fix|docs|style|refactor|perf|test|chore|revert|ci)(\(.+\))?:\s{1}[^ ]{1}.+$'; then
-  echo -e "\r${RED}❗️ Error: Commit message does not match the required pattern.${NC}\r\n"
-  exit 1
-fi
+## 钩子脚本接收一个参数，即包含 commit message 的临时文件的路径
+#commit_message_file="$1"
+## 读取提交信息
+#commit_message=$(<"$commit_message_file")
+#
+#sleep 1
+#
+## 检查提交信息是否符合规范
+#if ! echo "$commit_message" | grep -qE '^(feat|fix|docs|style|refactor|perf|test|chore|revert|ci)(\(.+\))?:\s{1}[^ ]{1}.+$'; then
+#  echo -e "\r${RED}❗️ Error: Commit message does not match the required pattern.${NC}\r\n"
+#  exit 1
+#fi
 
 echo -e "\r${GREEN}🎉 commit-msg executed successfully!\r\n${NC}"
