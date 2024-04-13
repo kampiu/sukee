@@ -241,4 +241,6 @@ body {
 	--sukee-border-radius-large: 12px;
 	--sukee-border-radius-circle: 50%;
 	--sukee-border-radius-full: 9999px;
+	/* 二维码 */
+	--sukee-qrcode-mask-background: rgba(255, 255, 255, 0.96);
 }

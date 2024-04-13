@@ -1,0 +1,54 @@
+@import "../../style/variable";
+
+@qrcode-prefix-cls: ~'@{sukee-prefix}-qrcode';
+
+.@{qrcode-prefix-cls} {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 12px;
+	overflow: hidden;
+	color: @sukee-color-text-0;
+	font-size: @sukee-font-size-regular;
+	line-height: 1.5714285714285714;
+	list-style: none;
+	background-color: @sukee-color-background-4;
+	border: 1px solid @sukee-color-border;
+	border-radius: @sukee-border-radius-medium;
+
+	&-mask {
+		position: absolute;
+		z-index: 10;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		color: @sukee-color-text-0;
+		line-height: 1.572;
+		text-align: center;
+		background-color: var(--sukee-qrcode-mask-background);
+		inset-block-start: 0;
+		inset-inline-start: 0;
+
+		> &-expired {
+			color: @sukee-color-text-0;
+		}
+	}
+
+	& > canvas {
+		align-self: stretch;
+		flex: auto;
+		min-width: 0;
+	}
+
+	&-borderless {
+		border-color: transparent;
+	}
+}
