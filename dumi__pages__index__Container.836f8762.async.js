@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksukee=self.webpackChunksukee||[]).push([[230],{94115:function(u,e,n){n.r(e);var a=n(67294),i=n(1827),s=n(85893),t=function(){return(0,s.jsx)("div",{className:"home-title",children:(0,s.jsx)("span",{children:"Sukee Design"})})};e.default=t},1827:function(){}}]);
