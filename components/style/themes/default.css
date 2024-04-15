@@ -243,4 +243,21 @@ body {
 	--sukee-border-radius-full: 9999px;
 	/* 二维码 */
 	--sukee-qrcode-mask-background: rgba(255, 255, 255, 0.96);
+	/* 内边距 */
+	--sukee-padding-xxs: 4px;
+	--sukee-padding-xs: 8px;
+	--sukee-padding-sm: 12px;
+	--sukee-padding: 16px;
+	--sukee-padding-md: 20px;
+	--sukee-padding-lg: 24px;
+	--sukee-padding-xl: 32px;
+	/* 外边距 */
+	--sukee-margin-xxs: 4px;
+	--sukee-margin-xs: 8px;
+	--sukee-margin-sm: 12px;
+	--sukee-margin: 16px;
+	--sukee-margin-md: 20px;
+	--sukee-margin-lg: 24px;
+	--sukee-margin-xl: 32px;
+	--sukee-margin-xxl: 48px;
 }

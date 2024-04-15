@@ -1,0 +1,66 @@
+@import "../../style/variable";
+
+@space-prefix-cls: ~"@{sukee-prefix}-space";
+
+.@{space-prefix-cls} {
+	display: inline-flex;
+	flex-wrap: wrap;
+
+	&-vertical {
+		flex-direction: column;
+	}
+
+	&-align {
+		&-start {
+			align-items: flex-start;
+		}
+
+		&-center {
+			align-items: center;
+		}
+
+		&-start {
+			align-items: flex-start;
+		}
+
+		&-end {
+			align-items: flex-end;
+		}
+
+		&-baseline {
+			align-items: baseline;
+		}
+	}
+
+	&-row-gap {
+		&-small {
+			column-gap: @sukee-padding-xs;
+		}
+
+		&-middle {
+			column-gap: @sukee-padding;
+		}
+
+		&-large {
+			column-gap: @sukee-padding-lg;
+		}
+	}
+
+	&-col-gap {
+		&-small {
+			column-gap: @sukee-padding-xs;
+		}
+
+		&-middle {
+			column-gap: @sukee-padding;
+		}
+
+		&-large {
+			column-gap: @sukee-padding-lg;
+		}
+	}
+
+	&-item {
+
+	}
+}
